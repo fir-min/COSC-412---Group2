@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'budget/overall'
+
+  get 'home/index'
+
  # get 'admin_home/admin_home'
 
   devise_for :users
@@ -8,18 +12,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  
-  #sets the root to the devise signin page.
-  devise_scope :user do
-    authenticated :user do
-      root 'admin_home#admin_home', as: :authenticated_root
-    end
-
-    unauthenticated do
-      root 'devise/sessions#new', as: :unauthenticated_root
-    end
-  end
-  
+  root 'home#index'
   
 
   # Example of regular route:
