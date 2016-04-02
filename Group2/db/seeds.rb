@@ -11,3 +11,5 @@ user.save
 admin = User.new(:email => 'admin@gmail.com', :password => 'password', :password_confirmation => 'password')
 admin.save
 
+
+
