@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   devise_for :users
   match ':controller(/:action(/:id(.:format)))', :via => :get
-  
+  post '/user_config/addUser'
+  get '/user_config/addUser'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
