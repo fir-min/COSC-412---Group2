@@ -1,0 +1,4 @@
+<% if !user.nil? && !user.new_record? %>
+
+    <p ><%= user.email  %> | <%= link_to "Destroy", user,  method: :delete, data: { confirm: "Are you sure?" } %> </p>
+<% end %>
