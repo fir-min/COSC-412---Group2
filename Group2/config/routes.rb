@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :purchases
+  resources :inventories
   devise_for :users
   match ':controller(/:action(/:id(.:format)))', :via => :get
   post '/user_config/addUser'
