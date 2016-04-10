@@ -1,0 +1,5 @@
+<% if !user.nil? && !user.new_record? %>
+
+    <p ><%= user.email  %> | <%= link_to "Destroy", url_for(controller:
+    'users', action: 'destroy', id: user.id),  method: :delete, data: { confirm: "Are you sure?" } %> </p>
+<% end %>
