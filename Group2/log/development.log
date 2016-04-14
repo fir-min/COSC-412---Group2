@@ -4163,3 +4163,10 @@ Processing by UserConfigController#removeUserType as HTML
   Rendered users/_user.html.erb (0.0ms)
   Rendered user_config/removeUserType.html.erb within layouts/application (69.1ms)
 Completed 200 OK in 347ms (Views: 344.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-14 13:00:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 1072ms (Views: 1070.5ms | ActiveRecord: 0.0ms)
