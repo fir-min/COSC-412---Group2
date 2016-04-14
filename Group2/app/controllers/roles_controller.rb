@@ -1,0 +1,3 @@
+class RolessController < ApplicationController
+
+end

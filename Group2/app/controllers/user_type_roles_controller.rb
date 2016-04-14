@@ -1,0 +1,3 @@
+class UserTypeRolesController < ApplicationController
+
+end
