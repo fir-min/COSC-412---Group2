@@ -4,9 +4,18 @@ Rails.application.routes.draw do
   resources :purchases
   resources :inventories
   devise_for :users
+
+
   match ':controller(/:action(/:id(.:format)))', :via => :get
   post '/user_config/addUser'
   get '/user_config/addUser'
+  post '/user_config/viewUsers'
+  get '/user_config/viewUsers'
+  post '/user_edits/editIt'
+  post '/user_edits/addIt'
+  post '/user_edits/deleteIt'
+  get  '/removeUser'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

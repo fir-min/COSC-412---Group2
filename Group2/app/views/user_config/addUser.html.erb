@@ -1,23 +1,10 @@
-<h1>UserConfig#addUser</h1>
-<p>Find me in app/views/user_config/addUser.html.erb</p>
-<% a = User.count %>
-<%= a %>
+<h1>Add a new User</h1>
 
+<%= form_tag("/user_edits/addIt", method: "post") do %>
+    <%= label_tag(:searchUser0, "Add your user:") %> <br>
+    <%= label_tag(:searchUser1, "Enter the email:") %> <%= text_field_tag(:userEmail) %> <br>
+    <%= label_tag(:searchUser2, "Enter the new password:") %><%= text_field_tag(:userPassword) %> <br>
+    <%= label_tag(:searchUser3, "Enter the new user type:") %><%= text_field_tag(:userPassCon) %>
 
-
-<%= submit_tag "Test me!", :type => 'button', :onclick => 'alert("It works!")' %>
-
-<%= link_to 'sumIt', '#', :onclick => 'sum_fn()' %>
-
-<h1>Enter your email address</h1>
-
-
-
-<%= submit_tag "Save", :onclick => "return confirm('Are you sure?')" %>
-
-<%= @clients %> <br/>
- <br/>
-<%=  User.all.each do |product| %>
-    <h1> Product <%= product.email %> </h1>
+    <%= submit_tag("Add User") %>
 <% end %>
-

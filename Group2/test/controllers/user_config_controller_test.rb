@@ -27,7 +27,7 @@ class UserConfigControllerTest < ActionController::TestCase
   end
 
   test "should get removeUserType" do
-    get :removeUserType
+    get :listUsers
     assert_response :success
   end
 

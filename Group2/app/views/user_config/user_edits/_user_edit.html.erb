@@ -1,0 +1,5 @@
+<% if !user.nil? && !user.new_record? %>
+
+    <p ><%= user.email%> | <%= text_field_tag 'name' %> | <%= link_to "Alter", url_for(controller:
+                                                                        'users', action: 'search', name: params[:name]),  method: :delete, data: { confirm: "Are you sure?" } %> </p>
+<% end %>

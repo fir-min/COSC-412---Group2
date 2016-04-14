@@ -1,17 +1,15 @@
-<h1>UserConfig#editUser</h1>
-<p>Find me in app/views/user_config/editUser.html.erb</p>
 
-<%= form_tag("/user_config/editUser", method: "get") do %>
-    <%= label_tag(:q, "Search for user:") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("SearchUser") %>
-<% end %>
-<%= form_for @user, url: {action: "addUser"}, html: {class: "nifty_form"} do |f| %>
-    <p>Email</p>
-    <%= f.text_field  :email, :placeholder=>'Enter email', :required=>true   %>
-    <p> Password</p>
-    <%= f.password_field :password, :placeholder=>'Enter your password', :required=>true %>
-    <p> Confirm Password</p>
-    <%= f.password_field :passwordConfirm, :placeholder=>'Enter the same password', :required=>true %>
-    <%= f.submit "Create" %>
+
+<h1>Edit the User</h1>
+
+<p> This still needs updates for areas that will be editted. The only thing I can think of is the password.</p>
+<p>Right now it just adds a new user</p>
+
+<%= form_tag("/user_edits/editIt", method: "post") do %>
+    <%= label_tag(:searchUser0, "Enter the field you want edited:") %> <br>
+    <%= label_tag(:searchUser1, "Enter the email:") %> <%= text_field_tag(:userEmail) %> <br>
+    <%= label_tag(:searchUser2, "Enter the new password:") %><%= text_field_tag(:userPassword) %> <br>
+    <%= label_tag(:searchUser3, "Enter the new user type:") %><%= text_field_tag(:userType) %>
+
+    <%= submit_tag("Edit User") %>
 <% end %>

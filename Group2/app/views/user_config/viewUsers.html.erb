@@ -12,3 +12,21 @@
 <br>
 <%= link_to("Click me to edit users", "/user_config/editUser", html_options = {}) %>
 <%= link_to("Click me to add users", "/user_config/addUser", html_options = {}) %>
+<% temp = User.find_by_email(@searchedTerm) %>
+<h1><%= temp.email %>    <%= temp.id%></h1>
+
+<%= form_for @user, url: {action: "viewUsers"}, html: {class: "nifty_form"} do |f| %>
+    <p>Email</p>
+    <%= f.text_field  :email, :placeholder=>'Enter email', :required=>true   %>
+    <p> Password</p>
+    <%= f.password_field :password, :placeholder=>'Enter your password', :required=>true %>
+    <p> Confirm Password</p>
+    <%= f.password_field :passwordConfirm, :placeholder=>'Enter the same password', :required=>true %>
+    <%= f.submit "Create" %>
+<% end %>
+
+
+
+<%= @temp%>
+<%= @pass  %>
+<%= @pass2  %>
