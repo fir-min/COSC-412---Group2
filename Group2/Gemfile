@@ -6,6 +6,7 @@ gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+gem 'stripe'
 #devise
 gem 'devise'
 # Use SCSS for stylesheets
@@ -48,4 +49,3 @@ group :development do
   gem 'spring'
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 end
-
