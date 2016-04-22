@@ -11,5 +11,6 @@ user.save
 admin = User.new(:email => 'admin@gmail.com', :password => 'password', :password_confirmation => 'password')
 admin.save
 
-
+admin2 = BudgetManage.new(:department => "HR", :deptno => 123, :amount => 100)
+admin2.save
 
