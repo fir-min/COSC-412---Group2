@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160407233612) do
+ActiveRecord::Schema.define(version: 20160422192044) do
+
+  create_table "budget_manages", force: :cascade do |t|
+    t.string   "department"
+    t.integer  "deptno"
+    t.integer  "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "budgets", force: :cascade do |t|
+    t.integer  "Amount"
+    t.string   "Department"
+    t.integer  "DeptNo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "inventories", force: :cascade do |t|
     t.string   "name"
@@ -30,6 +46,28 @@ ActiveRecord::Schema.define(version: 20160407233612) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_type_roles", force: :cascade do |t|
+    t.integer  "user_type_id"
+    t.integer  "role_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "user_type_roles", ["role_id"], name: "index_user_type_roles_on_role_id"
+  add_index "user_type_roles", ["user_type_id"], name: "index_user_type_roles_on_user_type_id"
+
+  create_table "user_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

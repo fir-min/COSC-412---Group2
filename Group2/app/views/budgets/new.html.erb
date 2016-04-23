@@ -1,0 +1,13 @@
+<h1>New</h1>
+<p>Find me in app/views/budget/overall.html.erb</p>
+
+<tbody>
+<% @budgets.each do |b| %>
+    <tr>
+      <td><%= b.amount %></td>
+      <td><%= b.department %></td>
+      <td><%= b.deptno %></td>
+
+    </tr>
+<% end %>
+</tbody>
