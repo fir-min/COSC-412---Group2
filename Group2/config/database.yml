@@ -1,6 +1,6 @@
 #Bryan- changed adapter from sqlite3 to mysql2
 default: &default
-  adapter: mysql2
+  adapter: sqlite3
   encoding: utf8
   username: admin
   password: password

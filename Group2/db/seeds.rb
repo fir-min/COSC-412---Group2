@@ -8,9 +8,26 @@
 user = User.new(:email => 'test@gmail.com', :password => 'password', :password_confirmation => 'password')
 user.save
 
-admin = User.new(:email => 'admin@gmail.com', :password => 'password', :password_confirmation => 'password')
+admin = User.new(:email => 'admin@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 1)
 admin.save
 
-admin2 = BudgetManage.new(:department => "HR", :deptno => 123, :amount => 100)
-admin2.save
+man = User.new(:email => 'manager@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 2)
+man.save
+
+sup = User.new(:email => 'supervisor@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 3)
+sup.save
+
+agent = User.new(:email => 'agent@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 4)
+agent.save
+
+watch = User.new(:email => 'watcher@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 5)
+watch.save
+
+aud = User.new(:email => 'auditor@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 6)
+aud.save
+
+
+
+budget = BudgetManage.new(:department => "HR", :deptno => 123, :amount => 100)
+budget.save
 

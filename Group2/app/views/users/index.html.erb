@@ -1,7 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
 
+<h1>Listing Users</h1>
+<% if signed_in? %>
+     <h2 id="testS"> Current User:   <%=  current_user.email %></h2>
+   <% end %>
+<p>Hi my name is BOB </p>
 <table>
   <thead>
     <tr>

@@ -14,4 +14,36 @@ cancel_user_registration GET    /users/cancel(.:format)                devise/re
                          PATCH  /users(.:format)                       devise/registrations#update
                          PUT    /users(.:format)                       devise/registrations#update
                          DELETE /users(.:format)                       devise/registrations#destroy
+                   users GET    /users(.:format)                       users#index
+                         POST   /users(.:format)                       users#create
+                new_user GET    /users/new(.:format)                   users#new
+               edit_user GET    /users/:id/edit(.:format)              users#edit
+                    user GET    /users/:id(.:format)                   users#show
+                         PATCH  /users/:id(.:format)                   users#update
+                         PUT    /users/:id(.:format)                   users#update
+                         DELETE /users/:id(.:format)                   users#destroy
+                 charges GET    /charges(.:format)                     charges#index
+                         POST   /charges(.:format)                     charges#create
+              new_charge GET    /charges/new(.:format)                 charges#new
+             edit_charge GET    /charges/:id/edit(.:format)            charges#edit
+                  charge GET    /charges/:id(.:format)                 charges#show
+                         PATCH  /charges/:id(.:format)                 charges#update
+                         PUT    /charges/:id(.:format)                 charges#update
+                         DELETE /charges/:id(.:format)                 charges#destroy
+               purchases GET    /purchases(.:format)                   purchases#index
+                         POST   /purchases(.:format)                   purchases#create
+            new_purchase GET    /purchases/new(.:format)               purchases#new
+           edit_purchase GET    /purchases/:id/edit(.:format)          purchases#edit
+                purchase GET    /purchases/:id(.:format)               purchases#show
+                         PATCH  /purchases/:id(.:format)               purchases#update
+                         PUT    /purchases/:id(.:format)               purchases#update
+                         DELETE /purchases/:id(.:format)               purchases#destroy
+             inventories GET    /inventories(.:format)                 inventories#index
+                         POST   /inventories(.:format)                 inventories#create
+           new_inventory GET    /inventories/new(.:format)             inventories#new
+          edit_inventory GET    /inventories/:id/edit(.:format)        inventories#edit
+               inventory GET    /inventories/:id(.:format)             inventories#show
+                         PATCH  /inventories/:id(.:format)             inventories#update
+                         PUT    /inventories/:id(.:format)             inventories#update
+                         DELETE /inventories/:id(.:format)             inventories#destroy
                          GET    /:controller(/:action(/:id(.:format))) :controller#:action

@@ -7,4 +7,8 @@ class BudgetsController < ApplicationController
   def new
       @budgets = BudgetManage.all
   end
+
+  def index
+
+  end
 end

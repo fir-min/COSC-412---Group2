@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :charges
   resources :purchases
   resources :inventories
+  resources :budgets
+  resources :audit
   match ':controller(/:action(/:id(.:format)))', :via => :get
 
 
