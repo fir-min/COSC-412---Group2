@@ -5,24 +5,24 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-user = User.new(:email => 'test@gmail.com', :password => 'password', :password_confirmation => 'password')
+user = User.new(:email => 'test@gmail.com', :password => 'password', :password_confirmation => 'password', :name => 'ted')
 user.save
 
-admin = User.new(:email => 'admin@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 1)
+admin = User.new(:email => 'admin@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 1, :name => 'jay')
 admin.save
 
-man = User.new(:email => 'manager@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 2)
+man = User.new(:email => 'manager@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 2, :name => 'firms')
 man.save
 
-sup = User.new(:email => 'supervisor@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 3)
+sup = User.new(:email => 'supervisor@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 3, :name => 'karyl')
 sup.save
 
-agent = User.new(:email => 'agent@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 4)
+agent = User.new(:email => 'agent@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 4, :name => 'dayna')
 agent.save
 
-watch = User.new(:email => 'watcher@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 5)
+watch = User.new(:email => 'watcher@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 5, :name => 'brian')
 watch.save
 
-aud = User.new(:email => 'auditor@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 6)
+aud = User.new(:email => 'auditor@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 6, :name => 'aryn')
 aud.save
   
