@@ -1,0 +1,16 @@
+.sent  {
+  margin-left: 20%;
+  width: 20%;
+  background: #b0e1ff;
+}
+
+.main {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+}
+
+.received  {
+  margin-right: 20%;
+  width: 80%;
+}

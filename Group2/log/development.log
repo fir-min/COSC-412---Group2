@@ -22194,3 +22194,949 @@ Migrating to AddDeliveryTrackingInfoToMailboxerReceipts (20160503050025)
   [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'auditor@gmail.com' LIMIT 1[0m
   [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "user_type_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "auditor@gmail.com"], ["encrypted_password", "$2a$10$RjTQKcShcs/Jh3Tm4a9CWupudhxq6DP2yEXlUOj2LEi.cTvBLzRje"], ["user_type_id", 6], ["created_at", "2016-05-03 06:58:44.399427"], ["updated_at", "2016-05-03 06:58:44.399427"]]
   [1m[36m (191.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for ::1 at 2016-05-03 03:19:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 374ms (Views: 335.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 03:19:54 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 305ms (Views: 304.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/conversations" for ::1 at 2016-05-03 03:20:03 -0400
+Processing by ConversationsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 2.0ms)
+
+NoMethodError (undefined method `mailbox' for nil:NilClass):
+  app/controllers/conversations_controller.rb:3:in `index'
+
+
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2609.8ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (2684.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (5763.5ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-05-03 03:20:13 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (296.4ms)
+Completed 200 OK in 877ms (Views: 825.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-05-03 03:20:29 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OT9WScc7homUe0tdss9IlzQbUu/HRrjfWuepy6m7JBPQ3TlymO/cosv10OMJTwJAvHfJDRxoNxqA51nallRlRA==", "user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "admin@gmail.com"]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-05-03 07:20:29.865972"], ["current_sign_in_at", "2016-05-03 07:20:29.865972"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2016-05-03 07:20:29.874982"], ["id", 2]]
+  [1m[36m (224.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1091ms (ActiveRecord: 229.3ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 03:20:30 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 354ms (Views: 351.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-05-03 03:20:39 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (106.2ms)
+Completed 200 OK in 664ms (Views: 661.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-05-03 03:20:55 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qeKvwqlvwhAT+2peXp7q1WtqKHwVwbYvPNbHZi+ulVh6yQwM2fwag9ahsGgSnoUL+NBG6It4g3ldTjXG86BT7w==", "user"=>{"email"=>"manager@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "manager@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-05-03 07:20:55.359497"], ["current_sign_in_at", "2016-05-03 07:20:55.359497"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2016-05-03 07:20:55.362500"], ["id", 3]]
+  [1m[36m (118.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1125ms (ActiveRecord: 120.2ms)
+
+
+Started GET "/" for ::1 at 2016-05-03 03:20:56 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 431ms (Views: 429.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/conversations" for ::1 at 2016-05-03 03:21:03 -0400
+Processing by ConversationsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (1.0ms)[0m  [1mSELECT DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  ORDER BY mailboxer_conversations.updated_at DESC[0m  [["receiver_id", 2], ["receiver_type", "User"]]
+  Rendered conversations/index.html.erb within layouts/application (88.1ms)
+Completed 200 OK in 468ms (Views: 363.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/conversations" for ::1 at 2016-05-03 03:21:09 -0400
+Processing by ConversationsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Conversation Load (1.0ms)[0m  [1mSELECT DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  ORDER BY mailboxer_conversations.updated_at DESC[0m  [["receiver_id", 3], ["receiver_type", "User"]]
+  Rendered conversations/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 327ms (Views: 313.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/conversations/new" for ::1 at 2016-05-03 03:21:12 -0400
+Processing by ConversationsController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered conversations/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 331ms (Views: 321.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/conversations" for ::1 at 2016-05-03 03:21:21 -0400
+Processing by ConversationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6DAwurXzyHeVKZZBKjUw3iR/tDeXXUTEkHqvI4u6JpOixlj37wUn2G2/fvttqKbv3DPdvoIDKCXwhyCAeoIA3w==", "user_id"=>"2", "subject"=>"booya", "body"=>"booya", "commit"=>"Save changes"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/bundler/gems/mailboxer-f2ac542657e7/app/views/mailboxer/message_mailer/new_message_email.html.erb (3.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/bundler/gems/mailboxer-f2ac542657e7/app/views/mailboxer/message_mailer/new_message_email.text.erb (7.0ms)
+
+Mailboxer::MessageMailer#send_email: processed outbound mail in 3519.2ms
+
+Sent mail to admin@gmail.com (2074.1ms)
+Date: Tue, 03 May 2016 03:21:25 -0400
+From: no-reply@mailboxer.com
+To: admin@gmail.com
+Message-ID: <5728517593f3e_286c1e54f8825737@Yoshimitsu.mail>
+Subject: Mailboxer new message: booya
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5728517588f38_286c1e54f8825663";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5728517588f38_286c1e54f8825663
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You have a new message: booya
+===============================================
+
+You have received a new message:
+
+-----------------------------------------------
+booya
+-----------------------------------------------
+
+Visit http://localhost:3000/ and go to your inbox for more info.
+
+----==_mimepart_5728517588f38_286c1e54f8825663
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>You have a new message: booya</h1>
+    <p>
+      You have received a new message:
+    </p>
+    <blockquote>
+      <p>
+        booya
+      </p>
+    </blockquote>
+    <p>
+      Visit <a href="http://localhost:3000/">http://localhost:3000/</a> and go to your inbox for more info.
+    </p>
+  </body>
+</html>
+
+----==_mimepart_5728517588f38_286c1e54f8825663--
+
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (7.0ms)[0m  [1mINSERT INTO "mailboxer_conversations" ("subject", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["subject", "booya"], ["created_at", "2016-05-03 07:21:21.757348"], ["updated_at", "2016-05-03 07:21:21.757348"]]
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "mailboxer_notifications" ("type", "sender_id", "sender_type", "body", "subject", "created_at", "updated_at", "conversation_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["type", "Mailboxer::Message"], ["sender_id", 3], ["sender_type", "User"], ["body", "booya"], ["subject", "booya"], ["created_at", "2016-05-03 07:21:21.757348"], ["updated_at", "2016-05-03 07:21:21.757348"], ["conversation_id", 1]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "mailboxer_receipts" ("mailbox_type", "receiver_id", "receiver_type", "is_read", "notification_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["mailbox_type", "sentbox"], ["receiver_id", 3], ["receiver_type", "User"], ["is_read", "t"], ["notification_id", 1], ["created_at", "2016-05-03 07:21:27.689083"], ["updated_at", "2016-05-03 07:21:27.689083"]]
+  [1m[35m (186.3ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "mailboxer_receipts" ("mailbox_type", "receiver_id", "receiver_type", "delivery_method", "message_id", "notification_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["mailbox_type", "inbox"], ["receiver_id", 2], ["receiver_type", "User"], ["delivery_method", "email"], ["message_id", "5728517593f3e_286c1e54f8825737@Yoshimitsu.mail"], ["notification_id", 1], ["created_at", "2016-05-03 07:21:27.897390"], ["updated_at", "2016-05-03 07:21:27.897390"]]
+  [1m[36m (132.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mMailboxer::Conversation Load (1.0ms)[0m  [1mSELECT  "mailboxer_conversations".* FROM "mailboxer_conversations" WHERE "mailboxer_conversations"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/conversations/1
+Completed 302 Found in 6354ms (ActiveRecord: 336.5ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:21:28 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Conversation Load (1.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 3], ["receiver_type", "User"], ["id", 1]]
+  [1m[35mMailboxer::Receipt Load (1.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  [["receiver_id", 3], ["receiver_type", "User"]]
+  [1m[36mMailboxer::Message Load (0.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered conversations/show.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 386ms (Views: 352.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/conversations" for ::1 at 2016-05-03 03:21:37 -0400
+Processing by ConversationsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Conversation Load (1.0ms)[0m  SELECT DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  ORDER BY mailboxer_conversations.updated_at DESC  [["receiver_id", 2], ["receiver_type", "User"]]
+  Rendered conversations/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 306ms (Views: 299.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:21:40 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Conversation Load (1.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (0.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered conversations/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 317ms (Views: 302.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/conversations/1/messages" for ::1 at 2016-05-03 03:21:45 -0400
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wQMAyQMp2cGnpc/fHaVK89K8ED0tsl8SAvg9RepKnoZS7M0Ees9tmCpJcn2iHzBBVrYwppD7vm18ZbHknMCZJQ==", "body"=>"reply", "commit"=>"Save changes", "conversation_id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (0.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_receipts"."trashed" = ? AND "mailboxer_receipts"."deleted" = ?  [["receiver_id", 2], ["receiver_type", "User"], ["trashed", "t"], ["deleted", "f"]]
+  [1m[36mMailboxer::Message Load (2.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."conversation_id" = ?  ORDER BY created_at DESC LIMIT 1[0m  [["conversation_id", 1]]
+  [1m[35mMailboxer::Receipt Load (4.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" WHERE "mailboxer_receipts"."notification_id" = ?  [["notification_id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (3, 2)[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "mailboxer_conversation_opt_outs" WHERE "mailboxer_conversation_opt_outs"."conversation_id" = ? AND "mailboxer_conversation_opt_outs"."unsubscriber_type" = ? AND "mailboxer_conversation_opt_outs"."unsubscriber_id" = ?  [["conversation_id", 1], ["unsubscriber_type", "User"], ["unsubscriber_id", 3]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "mailboxer_conversation_opt_outs" WHERE "mailboxer_conversation_opt_outs"."conversation_id" = ? AND "mailboxer_conversation_opt_outs"."unsubscriber_type" = ? AND "mailboxer_conversation_opt_outs"."unsubscriber_id" = ?[0m  [["conversation_id", 1], ["unsubscriber_type", "User"], ["unsubscriber_id", 2]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."conversation_id" = ?  [["conversation_id", 1]]
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/bundler/gems/mailboxer-f2ac542657e7/app/views/mailboxer/message_mailer/new_message_email.html.erb (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/bundler/gems/mailboxer-f2ac542657e7/app/views/mailboxer/message_mailer/new_message_email.text.erb (4.0ms)
+
+Mailboxer::MessageMailer#send_email: processed outbound mail in 2597.8ms
+
+Sent mail to manager@gmail.com (2015.0ms)
+Date: Tue, 03 May 2016 03:21:48 -0400
+From: no-reply@mailboxer.com
+To: manager@gmail.com
+Message-ID: <5728518cc54e8_286c3614164259e7@Yoshimitsu.mail>
+Subject: Mailboxer new message: booya
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5728518cc220b_286c361416425821";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5728518cc220b_286c361416425821
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You have a new message: booya
+===============================================
+
+You have received a new message:
+
+-----------------------------------------------
+reply
+-----------------------------------------------
+
+Visit http://localhost:3000/ and go to your inbox for more info.
+
+----==_mimepart_5728518cc220b_286c361416425821
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>You have a new message: booya</h1>
+    <p>
+      You have received a new message:
+    </p>
+    <blockquote>
+      <p>
+        reply
+      </p>
+    </blockquote>
+    <p>
+      Visit <a href="http://localhost:3000/">http://localhost:3000/</a> and go to your inbox for more info.
+    </p>
+  </body>
+</html>
+
+----==_mimepart_5728518cc220b_286c361416425821--
+
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "mailboxer_notifications" ("type", "sender_id", "sender_type", "conversation_id", "body", "subject", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["type", "Mailboxer::Message"], ["sender_id", 2], ["sender_type", "User"], ["conversation_id", 1], ["body", "reply"], ["subject", "booya"], ["created_at", "2016-05-03 07:21:50.847167"], ["updated_at", "2016-05-03 07:21:50.847167"]]
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "mailboxer_receipts" ("mailbox_type", "receiver_id", "receiver_type", "is_read", "notification_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["mailbox_type", "sentbox"], ["receiver_id", 2], ["receiver_type", "User"], ["is_read", "t"], ["notification_id", 2], ["created_at", "2016-05-03 07:21:50.857181"], ["updated_at", "2016-05-03 07:21:50.857181"]]
+  [1m[35m (248.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "mailboxer_receipts" ("mailbox_type", "receiver_id", "receiver_type", "delivery_method", "message_id", "notification_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["mailbox_type", "inbox"], ["receiver_id", 3], ["receiver_type", "User"], ["delivery_method", "email"], ["message_id", "5728518cc54e8_286c3614164259e7@Yoshimitsu.mail"], ["notification_id", 2], ["created_at", "2016-05-03 07:21:51.138598"], ["updated_at", "2016-05-03 07:21:51.138598"]]
+  [1m[36m (113.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mUPDATE "mailboxer_conversations" SET "updated_at" = '2016-05-03 07:21:51.276800' WHERE "mailboxer_conversations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (110.2ms)[0m  commit transaction
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Conversation Load (0.0ms)[0m  SELECT  "mailboxer_conversations".* FROM "mailboxer_conversations" WHERE "mailboxer_conversations"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/conversations/1
+Completed 302 Found in 5387ms (ActiveRecord: 490.7ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:21:51 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Conversation Load (1.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (1.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 356ms (Views: 320.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:31:45 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (1.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[35mMailboxer::Receipt Load (0.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[36mMailboxer::Message Load (0.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 336ms (Views: 320.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:32:15 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Conversation Load (0.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (1.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (1.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 357ms (Views: 328.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:32:20 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (0.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[35mMailboxer::Receipt Load (1.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Message Load (0.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 326ms (Views: 311.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:32:23 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Conversation Load (0.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (0.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Message Load (1.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 343ms (Views: 330.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:32:54 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (0.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[35mMailboxer::Receipt Load (0.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 336ms (Views: 320.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:32:58 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Conversation Load (1.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (1.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (1.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Message Load (1.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 330ms (Views: 314.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:33:15 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (0.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[35mMailboxer::Receipt Load (0.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 343ms (Views: 320.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:33:18 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Conversation Load (0.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (1.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (1.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Message Load (1.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 335ms (Views: 312.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:36:07 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Conversation Load (0.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 3], ["receiver_type", "User"], ["id", 1]]
+  Rendered conversations/show.html.erb within layouts/application (8569.6ms)
+Completed 500 Internal Server Error in 8926ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( conversation.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag    "conversation", :media => "all" %>
+    2: <h1><%= @conversation.subject %></h1>
+    3: <div>
+    4:   <%@conversation.receipts_for(current_user).each do |r|%>
+  app/views/conversations/show.html.erb:1:in `_app_views_conversations_show_html_erb__754646068_86082500'
+
+
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (22.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (4776.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (3136.6ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (7210.6ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:37:48 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (1.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  Rendered conversations/show.html.erb within layouts/application (412.6ms)
+Completed 500 Internal Server Error in 839ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( conversation.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag    "conversation", :media => "all" %>
+    2: <h1><%= @conversation.subject %></h1>
+    3: <div>
+    4:   <%@conversation.receipts_for(current_user).each do |r|%>
+  app/views/conversations/show.html.erb:1:in `_app_views_conversations_show_html_erb__754646068_86082500'
+
+
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2929.3ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (15.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (2818.1ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (6381.4ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:39:34 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (1.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  Rendered conversations/show.html.erb within layouts/application (132.2ms)
+Completed 500 Internal Server Error in 434ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( conversation.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag    "conversation", :media => "all" %>
+    2: <h1><%= @conversation.subject %></h1>
+    3: <div class="main">
+    4:   <%@conversation.receipts_for(current_user).each do |r|%>
+  app/views/conversations/show.html.erb:1:in `_app_views_conversations_show_html_erb__754646068_112438780'
+
+
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (24.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2698.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (2345.5ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (5573.2ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:44:49 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (1.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  Rendered conversations/show.html.erb within layouts/application (215.3ms)
+Completed 500 Internal Server Error in 607ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( conversation.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag    "conversation", :media => "all" %>
+    2: <h1><%= @conversation.subject %></h1>
+    3: <div class="main">
+    4:   <%@conversation.receipts_for(current_user).each do |r|%>
+  app/views/conversations/show.html.erb:1:in `_app_views_conversations_show_html_erb__754646068_112438780'
+
+
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (3018.4ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (3976.9ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (8201.1ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:47:45 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Conversation Load (0.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 3], ["receiver_type", "User"], ["id", 1]]
+  Rendered conversations/show.html.erb within layouts/application (148.2ms)
+Completed 500 Internal Server Error in 476ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( conversation.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag    "conversation", :media => "all", 'data-turbolinks-track' => true  %>
+    2: <h1><%= @conversation.subject %></h1>
+    3: <div class="main">
+    4:   <%@conversation.receipts_for(current_user).each do |r|%>
+  app/views/conversations/show.html.erb:1:in `_app_views_conversations_show_html_erb__754646068_95610900'
+
+
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2740.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (2452.6ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (5676.4ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:50:13 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (1.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[35mMailboxer::Receipt Load (1.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[36mMailboxer::Message Load (0.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Message Load (0.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (1487.2ms)
+Completed 200 OK in 2658ms (Views: 1992.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/conversation.self-49c316849f77f5003afcd971b6bf58e5455a6a884f0d0ce4bba459d52e7455e5.css?body=1" for ::1 at 2016-05-03 03:50:17 -0400
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:51:18 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Conversation Load (0.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (1.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (2.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (181.3ms)
+Completed 200 OK in 523ms (Views: 493.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/conversation.self-63bf9b78e55c947ea14fdac6ca4eb987f437d3fc1cf6e27c87972662eaf8ce06.css?body=1" for ::1 at 2016-05-03 03:51:18 -0400
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:51:32 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (0.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[35mMailboxer::Receipt Load (0.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[36mMailboxer::Message Load (0.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Message Load (0.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (136.2ms)
+Completed 200 OK in 568ms (Views: 553.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/conversation.self-3ce4207ffc68d8a45263d9802f6a84c51d7ba623a38da81509cb7d4cef6ff047.css?body=1" for ::1 at 2016-05-03 03:51:33 -0400
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:51:36 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Conversation Load (1.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (1.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 578ms (Views: 554.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/conversation.self-3ce4207ffc68d8a45263d9802f6a84c51d7ba623a38da81509cb7d4cef6ff047.css?body=1" for ::1 at 2016-05-03 03:51:37 -0400
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:51:50 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (0.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[35mMailboxer::Receipt Load (1.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Message Load (2.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (136.2ms)
+Completed 200 OK in 505ms (Views: 481.5ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/conversation.self-ea5715ceb02a1d0df48c03a2c95f5b9e448a9c2b9cf54825f68104882ad6e1b2.css?body=1" for ::1 at 2016-05-03 03:51:51 -0400
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:51:54 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Conversation Load (0.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (1.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (1.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (60.1ms)
+Completed 200 OK in 407ms (Views: 387.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/conversation.self-ea5715ceb02a1d0df48c03a2c95f5b9e448a9c2b9cf54825f68104882ad6e1b2.css?body=1" for ::1 at 2016-05-03 03:51:55 -0400
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:52:08 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (0.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[35mMailboxer::Receipt Load (1.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (183.3ms)
+Completed 200 OK in 569ms (Views: 537.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/conversation.self-c861d4fda4950df701f72e59763fa2ebe31f02f5cc47f1e67efbf7d4287b134b.css?body=1" for ::1 at 2016-05-03 03:52:10 -0400
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:52:25 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Conversation Load (1.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (1.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (130.2ms)
+Completed 200 OK in 520ms (Views: 493.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/conversation.self-50018cb0bda8706173c0e01d18b72532dd23db1899dab480167aeb415f0fa197.css?body=1" for ::1 at 2016-05-03 03:52:26 -0400
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:52:42 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Conversation Load (0.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[35mMailboxer::Receipt Load (1.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[36mMailboxer::Message Load (0.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (189.3ms)
+Completed 200 OK in 537ms (Views: 517.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/conversation.self-460939b5fe7f884a913b25395a82ca1a3b1a13042dc61f6d46fae2eaf53bcfc4.css?body=1" for ::1 at 2016-05-03 03:52:43 -0400
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:52:54 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Conversation Load (1.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 3], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (1.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 3], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (1.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Message Load (1.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered conversations/show.html.erb within layouts/application (67.1ms)
+Completed 200 OK in 472ms (Views: 448.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/conversation.self-460939b5fe7f884a913b25395a82ca1a3b1a13042dc61f6d46fae2eaf53bcfc4.css?body=1" for ::1 at 2016-05-03 03:52:55 -0400
+
+
+Started POST "/conversations/1/messages" for ::1 at 2016-05-03 03:53:03 -0400
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fkLylBn5iEnq/izKdOU+zk6aPTOvYpNReveZ2NEDuAc0tJrZQw9n5hJoxHAzeKj/ttZUuro8/7AaChZ7IDueSw==", "body"=>"hello", "commit"=>"Save changes", "conversation_id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Conversation Load (1.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 3], ["receiver_type", "User"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_receipts"."trashed" = ? AND "mailboxer_receipts"."deleted" = ?  [["receiver_id", 3], ["receiver_type", "User"], ["trashed", "t"], ["deleted", "f"]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."conversation_id" = ?  ORDER BY created_at DESC LIMIT 1[0m  [["conversation_id", 1]]
+  [1m[35mMailboxer::Receipt Load (1.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" WHERE "mailboxer_receipts"."notification_id" = ?  [["notification_id", 2]]
+  [1m[36mUser Load (6.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (2, 3)[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "mailboxer_conversation_opt_outs" WHERE "mailboxer_conversation_opt_outs"."conversation_id" = ? AND "mailboxer_conversation_opt_outs"."unsubscriber_type" = ? AND "mailboxer_conversation_opt_outs"."unsubscriber_id" = ?  [["conversation_id", 1], ["unsubscriber_type", "User"], ["unsubscriber_id", 2]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "mailboxer_conversation_opt_outs" WHERE "mailboxer_conversation_opt_outs"."conversation_id" = ? AND "mailboxer_conversation_opt_outs"."unsubscriber_type" = ? AND "mailboxer_conversation_opt_outs"."unsubscriber_id" = ?[0m  [["conversation_id", 1], ["unsubscriber_type", "User"], ["unsubscriber_id", 3]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."conversation_id" = ?  [["conversation_id", 1]]
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/bundler/gems/mailboxer-f2ac542657e7/app/views/mailboxer/message_mailer/reply_message_email.html.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/bundler/gems/mailboxer-f2ac542657e7/app/views/mailboxer/message_mailer/reply_message_email.text.erb (3.0ms)
+
+Mailboxer::MessageMailer#send_email: processed outbound mail in 4330.4ms
+
+Sent mail to admin@gmail.com (2106.1ms)
+Date: Tue, 03 May 2016 03:53:07 -0400
+From: no-reply@mailboxer.com
+To: admin@gmail.com
+Message-ID: <572858e3ed9cd_16a85d43e9c25854@Yoshimitsu.mail>
+Subject: Mailboxer new reply: booya
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_572858e3e25dc_16a85d43e9c257fe";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_572858e3e25dc_16a85d43e9c257fe
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You have a new reply: booya
+===============================================
+
+You have received a new reply:
+
+-----------------------------------------------
+hello
+-----------------------------------------------
+
+Visit http://localhost:3000/ and go to your inbox for more info.
+
+----==_mimepart_572858e3e25dc_16a85d43e9c257fe
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>You have a new reply: booya</h1>
+    <p>
+      You have received a new reply:
+    </p>
+    <blockquote>
+      <p>
+        hello
+      </p>
+    </blockquote>
+    <p>
+      Visit <a href="http://localhost:3000/">http://localhost:3000/</a> and go to your inbox for more info.
+    </p>
+  </body>
+</html>
+
+----==_mimepart_572858e3e25dc_16a85d43e9c257fe--
+
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "mailboxer_notifications" ("type", "sender_id", "sender_type", "conversation_id", "body", "subject", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["type", "Mailboxer::Message"], ["sender_id", 3], ["sender_type", "User"], ["conversation_id", 1], ["body", "hello"], ["subject", "booya"], ["created_at", "2016-05-03 07:53:10.075355"], ["updated_at", "2016-05-03 07:53:10.075355"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "mailboxer_receipts" ("mailbox_type", "receiver_id", "receiver_type", "is_read", "notification_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["mailbox_type", "sentbox"], ["receiver_id", 3], ["receiver_type", "User"], ["is_read", "t"], ["notification_id", 3], ["created_at", "2016-05-03 07:53:10.089377"], ["updated_at", "2016-05-03 07:53:10.089377"]]
+  [1m[35m (232.3ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "mailboxer_receipts" ("mailbox_type", "receiver_id", "receiver_type", "delivery_method", "message_id", "notification_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["mailbox_type", "inbox"], ["receiver_id", 2], ["receiver_type", "User"], ["delivery_method", "email"], ["message_id", "572858e3ed9cd_16a85d43e9c25854@Yoshimitsu.mail"], ["notification_id", 3], ["created_at", "2016-05-03 07:53:10.359775"], ["updated_at", "2016-05-03 07:53:10.359775"]]
+  [1m[36m (182.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mUPDATE "mailboxer_conversations" SET "updated_at" = '2016-05-03 07:53:10.558065' WHERE "mailboxer_conversations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (108.2ms)[0m  commit transaction
+  [1m[36mMailboxer::Message Load (4.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Conversation Load (1.0ms)[0m  SELECT  "mailboxer_conversations".* FROM "mailboxer_conversations" WHERE "mailboxer_conversations"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/conversations/1
+Completed 302 Found in 7448ms (ActiveRecord: 549.8ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:53:10 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (16.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Conversation Load (0.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 3], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (4.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 3], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (3.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Message Load (1.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered conversations/show.html.erb within layouts/application (74.1ms)
+Completed 200 OK in 504ms (Views: 464.8ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:54:19 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Conversation Load (0.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 3], ["receiver_type", "User"], ["id", 1]]
+  [1m[35mMailboxer::Receipt Load (1.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  [["receiver_id", 3], ["receiver_type", "User"]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered conversations/show.html.erb within layouts/application (216.3ms)
+Completed 200 OK in 585ms (Views: 563.8ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/conversation.self-85e740d54389ceb53ee8d32f8afdfd51553763b9731bacb5785a2b0f153c0414.css?body=1" for ::1 at 2016-05-03 03:54:20 -0400
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:54:45 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Conversation Load (1.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 3], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (1.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 3], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (1.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Message Load (1.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered conversations/show.html.erb within layouts/application (220.3ms)
+Completed 200 OK in 742ms (Views: 724.8ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/conversation.self-4c28a92c6796d265f848e667f949a4ebc9f43bb3f36928955ae67e68d826914a.css?body=1" for ::1 at 2016-05-03 03:54:46 -0400
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:54:55 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Conversation Load (0.0ms)[0m  [1mSELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1[0m  [["receiver_id", 3], ["receiver_type", "User"], ["id", 1]]
+  [1m[35mMailboxer::Receipt Load (1.0ms)[0m  SELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?  [["receiver_id", 3], ["receiver_type", "User"]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mMailboxer::Message Load (0.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mMailboxer::Message Load (1.0ms)[0m  [1mSELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered conversations/show.html.erb within layouts/application (273.4ms)
+Completed 200 OK in 813ms (Views: 788.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-03 03:54:56 -0400
+
+
+Started GET "/conversations/1" for ::1 at 2016-05-03 03:55:03 -0400
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Conversation Load (0.0ms)[0m  SELECT  DISTINCT "mailboxer_conversations".* FROM "mailboxer_conversations" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."conversation_id" = "mailboxer_conversations"."id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') INNER JOIN "mailboxer_receipts" ON "mailboxer_receipts"."notification_id" = "mailboxer_notifications"."id" WHERE "mailboxer_notifications"."type" = 'Mailboxer::Message' AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ? AND "mailboxer_conversations"."id" = ?  ORDER BY mailboxer_conversations.updated_at DESC LIMIT 1  [["receiver_id", 2], ["receiver_type", "User"], ["id", 1]]
+  [1m[36mMailboxer::Receipt Load (1.0ms)[0m  [1mSELECT "mailboxer_receipts".* FROM "mailboxer_receipts" INNER JOIN "mailboxer_notifications" ON "mailboxer_notifications"."id" = "mailboxer_receipts"."notification_id" AND "mailboxer_notifications"."type" IN ('Mailboxer::Message') WHERE "mailboxer_notifications"."conversation_id" = 1 AND "mailboxer_receipts"."receiver_id" = ? AND "mailboxer_receipts"."receiver_type" = ?[0m  [["receiver_id", 2], ["receiver_type", "User"]]
+  [1m[35mMailboxer::Message Load (32.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mMailboxer::Message Load (0.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mMailboxer::Message Load (1.0ms)[0m  SELECT  "mailboxer_notifications".* FROM "mailboxer_notifications" WHERE "mailboxer_notifications"."type" IN ('Mailboxer::Message') AND "mailboxer_notifications"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered conversations/show.html.erb within layouts/application (86.1ms)
+Completed 200 OK in 441ms (Views: 385.0ms | ActiveRecord: 36.0ms)
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-03 03:55:04 -0400
