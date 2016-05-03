@@ -6,7 +6,13 @@ Rails.application.routes.draw do
   resources :inventories
   resources :budgets
   resources :audit
+
+  root 'home#home'
+  resources :conversations do
+    resources :messages
+  end
   match ':controller(/:action(/:id(.:format)))', :via => :get
+
 
 
 end

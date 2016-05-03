@@ -5,4 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :user_types
+  acts_as_messageable
+
+  def mailboxer_email(object)
+    self.email
+  end
 end
