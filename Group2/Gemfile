@@ -8,6 +8,9 @@ gem 'mysql2', '~> 0.3.13' #Bryan- changed from 'sqlite3' to 'mysql2'
 gem 'sqlite3'
 gem 'stripe'
 #devise
+
+gem 'twitter-bootstrap-rails'
+
 gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
