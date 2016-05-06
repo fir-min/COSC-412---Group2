@@ -4,9 +4,39 @@
   <title>Group2</title>
 
 
-
 </head>
 <body>
+<% if user_signed_in? %>
+
+    <%= link_to "Sign_out", destroy_user_session_path %>
+    <% if current_user.user_type_id == 1 %>
+        <p><%=  "You're an admin" %></p>
+    <%  end %>
+
+    <% case current_user.user_type_id
+         when 1%>
+        <p><%=  "You're an admin" %></p>   <%= link_to 'Create New User', new_user_path %>   <%= link_to 'Manage Users', users_path %>  <%= link_to 'Manage Budget', budgets_path %>
+    <% when 2 %>
+        <p><%=  "You're a manager" %></p>   <%= link_to 'Manage Agent\'s Budget', budgets_path %>    <%= link_to 'Manage Users that are Watchers id = 5', users_path %>
+    <% when 3 %>
+        <p><%=  "You're a supervisor" %></p>  <%= link_to 'View Purchases', purchases_path %> <%= link_to 'Request Purchases', purchases_path %>
+    <% when 4 %>
+        <p><%=  "You're an agent" %></p> <%= link_to 'Make Purchase', purchases_path %> <%= link_to 'View Purchase Queue', purchases_path %>     <%= link_to 'Update Purchase Queue', purchases_path %>
+    <% when 5 %>
+        <p><%=  "You're a watcher" %></p>   <%= link_to 'View Transactions', charges_path %>
+    <% when 6 %>
+        <p><%=  "You're an auditor" %></p>  <%= link_to 'Request Document', '/audit/request_doc' %>    <%= link_to 'Audit', '/audit/audit' %>   <%= link_to 'Note', '/audit/note' %>  <%= link_to 'InTest', '/inventories' %>
+    <% else %>
+        <p><%=  "You have no user roles." %></p>
+    <%  end %>
+
+<% else %>
+    <p><%= link_to("Sign In", new_user_session_path)%></p>
+
+<% end %>
+
+
+
 
 <%= yield %>
 

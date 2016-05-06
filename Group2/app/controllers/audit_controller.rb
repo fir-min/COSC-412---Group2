@@ -12,5 +12,16 @@ class AuditController < ApplicationController
   def note 
     
   end
-  
+
+  def audit
+
+  end
+
+  def show
+
+  end
+
+  def index
+
+  end
 end
