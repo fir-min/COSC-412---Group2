@@ -21690,229 +21690,8 @@ Processing by AuditController#audit as HTML
 Completed 200 OK in 198ms (Views: 194.4ms | ActiveRecord: 1.0ms)
 
 
-Started GET "/inventories" for ::1 at 2016-05-05 22:32:46 -0400
-  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Processing by InventoriesController#index as HTML
-  [1m[35mInventory Load (1.0ms)[0m  SELECT "inventories".* FROM "inventories"
-  Rendered inventories/index.html.erb within layouts/application (112.2ms)
-  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
-Completed 200 OK in 774ms (Views: 677.7ms | ActiveRecord: 4.0ms)
-
-
-Started GET "/inventories/new" for ::1 at 2016-05-05 22:33:24 -0400
-Processing by InventoriesController#new as HTML
-  Rendered inventories/_form.html.erb (176.3ms)
-  Rendered inventories/new.html.erb within layouts/application (261.4ms)
-Completed 200 OK in 583ms (Views: 563.8ms | ActiveRecord: 1.0ms)
-
-
-Started POST "/inventories" for ::1 at 2016-05-05 22:34:08 -0400
-Processing by InventoriesController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EES1siozQuQeDfX/OQT4GiPNz4WQ91fzHnkFVJnnFqeDq3h/U9X2vZPhSF2GvoKop8fvHi2+toxg5In1720RBA==", "inventory"=>{"name"=>"Shirt", "description"=>"Something", "price"=>"12.95", "stock"=>"500", "item_number"=>"1234", "image"=>"something.jpg"}, "commit"=>"Create Inventory"}
-Unpermitted parameters: item_number, image
-  [1m[35m (0.0ms)[0m  begin transaction
-  [1m[36mSQL (23.0ms)[0m  [1mINSERT INTO "inventories" ("name", "description", "price", "stock", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Shirt"], ["description", "Something"], ["price", 12.95], ["stock", 500], ["created_at", "2016-05-06 02:34:08.254428"], ["updated_at", "2016-05-06 02:34:08.254428"]]
-  [1m[35m (92.1ms)[0m  commit transaction
-Redirected to http://localhost:3000/inventories/1
-Completed 302 Found in 142ms (ActiveRecord: 115.2ms)
-
-
-Started GET "/inventories/1" for ::1 at 2016-05-05 22:34:08 -0400
-Processing by InventoriesController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mInventory Load (1.0ms)[0m  [1mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = ? LIMIT 1[0m  [["id", 1]]
-  Rendered inventories/show.html.erb within layouts/application (13.0ms)
-Completed 200 OK in 354ms (Views: 314.0ms | ActiveRecord: 1.0ms)
-
-
-Started GET "/inventories" for ::1 at 2016-05-05 22:34:11 -0400
-Processing by InventoriesController#index as HTML
-  [1m[35mInventory Load (1.0ms)[0m  SELECT "inventories".* FROM "inventories"
-  Rendered inventories/index.html.erb within layouts/application (84.1ms)
-Completed 200 OK in 408ms (Views: 401.3ms | ActiveRecord: 1.0ms)
-
-
-Started GET "/inventories" for ::1 at 2016-05-05 22:35:38 -0400
-Processing by InventoriesController#index as HTML
-  [1m[36mInventory Load (1.0ms)[0m  [1mSELECT "inventories".* FROM "inventories"[0m
-  Rendered inventories/index.html.erb within layouts/application (20.0ms)
-Completed 200 OK in 320ms (Views: 317.4ms | ActiveRecord: 1.0ms)
-
-
-Started GET "/favicon.ico" for ::1 at 2016-05-05 22:35:39 -0400
-
-ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
-  C:/Ruby22-x64/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  C:/Ruby22-x64/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  C:/Ruby22-x64/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (18.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (3247.8ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (2182.2ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (5136.6ms)
-
-
-Started GET "/inventories" for ::1 at 2016-05-05 22:35:49 -0400
-Processing by InventoriesController#index as HTML
-  [1m[35mInventory Load (1.0ms)[0m  SELECT "inventories".* FROM "inventories"
-  Rendered inventories/index.html.erb within layouts/application (22.0ms)
-Completed 200 OK in 588ms (Views: 584.7ms | ActiveRecord: 1.0ms)
-
-
-Started GET "/inventories" for ::1 at 2016-05-05 22:35:50 -0400
-Processing by InventoriesController#index as HTML
-  [1m[36mInventory Load (1.0ms)[0m  [1mSELECT "inventories".* FROM "inventories"[0m
-  Rendered inventories/index.html.erb within layouts/application (18.0ms)
-Completed 200 OK in 459ms (Views: 454.4ms | ActiveRecord: 1.0ms)
-
-
-Started GET "/favicon.ico" for ::1 at 2016-05-05 22:35:51 -0400
-
-ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
-  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
-  C:/Ruby22-x64/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  C:/Ruby22-x64/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  C:/Ruby22-x64/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (13.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (2825.2ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1970.9ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (4628.8ms)
-
-
-Started GET "/inventories/new" for ::1 at 2016-05-05 22:36:01 -0400
-Processing by InventoriesController#new as HTML
-  Rendered inventories/_form.html.erb (12.0ms)
-  Rendered inventories/new.html.erb within layouts/application (63.1ms)
-Completed 200 OK in 368ms (Views: 365.8ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/inventories/1/edit" for ::1 at 2016-05-05 22:36:06 -0400
-Processing by InventoriesController#edit as HTML
-  Parameters: {"id"=>"1"}
-  [1m[35mInventory Load (1.0ms)[0m  SELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = ? LIMIT 1  [["id", 1]]
-  Rendered inventories/_form.html.erb (14.0ms)
-  Rendered inventories/edit.html.erb within layouts/application (92.1ms)
-Completed 200 OK in 466ms (Views: 460.4ms | ActiveRecord: 1.0ms)
-
-
-Started GET "/inventories" for ::1 at 2016-05-05 22:37:12 -0400
-  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Processing by InventoriesController#index as HTML
-  [1m[35mInventory Load (1.0ms)[0m  SELECT "inventories".* FROM "inventories"
-  Rendered inventories/index.html.erb within layouts/application (111.2ms)
-Completed 200 OK in 618ms (Views: 550.9ms | ActiveRecord: 3.0ms)
-
-
-Started GET "/inventories/1/edit" for ::1 at 2016-05-05 22:37:23 -0400
-Processing by InventoriesController#edit as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mInventory Load (1.0ms)[0m  [1mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = ? LIMIT 1[0m  [["id", 1]]
-  Rendered inventories/_form.html.erb (91.1ms)
-  Rendered inventories/edit.html.erb within layouts/application (163.2ms)
-Completed 200 OK in 569ms (Views: 507.5ms | ActiveRecord: 1.0ms)
-
-
-Started PATCH "/inventories/1" for ::1 at 2016-05-05 22:38:15 -0400
-Processing by InventoriesController#update as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wAEYO1O6pZcEK5d2msfwA9jzrANSWiai8RRRqfFffVhT7tX2KlwRzonHKtQlfYqxXPmMmO8Tx92Pid0Ih9V6+w==", "inventory"=>{"name"=>"Shirt", "description"=>"Something", "price"=>"12.95", "stock"=>"500", "item_number"=>"12345", "image"=>"http://placekitten.com/150/150"}, "commit"=>"Update Inventory", "id"=>"1"}
-  [1m[35mInventory Load (1.0ms)[0m  SELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = ? LIMIT 1  [["id", 1]]
-Unpermitted parameters: item_number, image
-  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.0ms)[0m  commit transaction
-Redirected to http://localhost:3000/inventories/1
-Completed 302 Found in 15ms (ActiveRecord: 1.0ms)
-
-
-Started GET "/inventories/1" for ::1 at 2016-05-05 22:38:15 -0400
-Processing by InventoriesController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mInventory Load (0.0ms)[0m  [1mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = ? LIMIT 1[0m  [["id", 1]]
-  Rendered inventories/show.html.erb within layouts/application (8.0ms)
-Completed 200 OK in 320ms (Views: 316.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/purchases" for ::1 at 2016-05-05 22:42:41 -0400
-Processing by PurchasesController#index as HTML
-  [1m[35mPurchase Load (1.0ms)[0m  SELECT "purchases".* FROM "purchases"
-  Rendered purchases/index.html.erb within layouts/application (12.0ms)
-Completed 200 OK in 317ms (Views: 305.7ms | ActiveRecord: 1.0ms)
-
-
-Started GET "/purchases/new" for ::1 at 2016-05-05 22:42:48 -0400
-Processing by PurchasesController#new as HTML
-  Rendered purchases/_form.html.erb (11.0ms)
-  Rendered purchases/new.html.erb within layouts/application (62.1ms)
-Completed 200 OK in 373ms (Views: 357.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/products" for ::1 at 2016-05-05 22:48:41 -0400
-  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2016-05-06 19:02:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 
 ActiveRecord::PendingMigrationError (
 
@@ -21953,31 +21732,31 @@ Migrations are pending. To resolve this issue, run:
   rack (1.6.4) lib/rack/lock.rb:17:in `call'
   rack (1.6.4) lib/rack/content_length.rb:15:in `call'
   rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
-  C:/Ruby22-x64/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  C:/Ruby22-x64/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  C:/Ruby22-x64/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2301.4ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (2030.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
-  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (4648.8ms)
-  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (597.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (587.2ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1305.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Migrating to CreateProducts (20160506024808)
-  [1m[35m (0.0ms)[0m  begin transaction
-  [1m[36m (30.0ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "price" float, "image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
-  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160506024808"]]
-  [1m[36m (83.1ms)[0m  [1mcommit transaction[0m
-  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
-  [1m[36m (8.0ms)[0m  [1m            SELECT sql
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "price" float, "image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160506024808"]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
             FROM sqlite_master
             WHERE name='index_mailboxer_conversation_opt_outs_on_conversation_id' AND type='index'
             UNION ALL
@@ -21985,31 +21764,31 @@ Migrating to CreateProducts (20160506024808)
             FROM sqlite_temp_master
             WHERE name='index_mailboxer_conversation_opt_outs_on_conversation_id' AND type='index'
 [0m
-  [1m[35m (1.0ms)[0m              SELECT sql
+  [1m[35m (0.0ms)[0m              SELECT sql
             FROM sqlite_master
             WHERE name='index_mailboxer_conversation_opt_outs_on_unsubscriber_id_type' AND type='index'
             UNION ALL
             SELECT sql
             FROM sqlite_temp_master
             WHERE name='index_mailboxer_conversation_opt_outs_on_unsubscriber_id_type' AND type='index'
-
-  [1m[36m (1.0ms)[0m  [1m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_mailboxer_notifications_on_notified_object_id_and_type' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_mailboxer_notifications_on_notified_object_id_and_type' AND type='index'
-[0m
-  [1m[35m (1.0ms)[0m              SELECT sql
-            FROM sqlite_master
-            WHERE name='index_mailboxer_notifications_on_sender_id_and_sender_type' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_mailboxer_notifications_on_sender_id_and_sender_type' AND type='index'
 
   [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_notifications_on_notified_object_id_and_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_notifications_on_notified_object_id_and_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_notifications_on_sender_id_and_sender_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_notifications_on_sender_id_and_sender_type' AND type='index'
+
+  [1m[36m (0.5ms)[0m  [1m            SELECT sql
             FROM sqlite_master
             WHERE name='index_mailboxer_notifications_on_type' AND type='index'
             UNION ALL
@@ -22033,7 +21812,7 @@ Migrating to CreateProducts (20160506024808)
             FROM sqlite_temp_master
             WHERE name='index_mailboxer_receipts_on_receiver_id_and_receiver_type' AND type='index'
 [0m
-  [1m[35m (1.0ms)[0m              SELECT sql
+  [1m[35m (0.5ms)[0m              SELECT sql
             FROM sqlite_master
             WHERE name='index_mailboxer_receipts_on_notification_id' AND type='index'
             UNION ALL
@@ -22041,7 +21820,7 @@ Migrating to CreateProducts (20160506024808)
             FROM sqlite_temp_master
             WHERE name='index_mailboxer_receipts_on_notification_id' AND type='index'
 
-  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+  [1m[36m (0.5ms)[0m  [1m            SELECT sql
             FROM sqlite_master
             WHERE name='index_user_type_roles_on_role_id' AND type='index'
             UNION ALL
@@ -22049,7 +21828,7 @@ Migrating to CreateProducts (20160506024808)
             FROM sqlite_temp_master
             WHERE name='index_user_type_roles_on_role_id' AND type='index'
 [0m
-  [1m[35m (1.0ms)[0m              SELECT sql
+  [1m[35m (0.0ms)[0m              SELECT sql
             FROM sqlite_master
             WHERE name='index_user_type_roles_on_user_type_id' AND type='index'
             UNION ALL
@@ -22057,7 +21836,7 @@ Migrating to CreateProducts (20160506024808)
             FROM sqlite_temp_master
             WHERE name='index_user_type_roles_on_user_type_id' AND type='index'
 
-  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+  [1m[36m (0.5ms)[0m  [1m            SELECT sql
             FROM sqlite_master
             WHERE name='index_users_on_reset_password_token' AND type='index'
             UNION ALL
@@ -22065,7 +21844,7 @@ Migrating to CreateProducts (20160506024808)
             FROM sqlite_temp_master
             WHERE name='index_users_on_reset_password_token' AND type='index'
 [0m
-  [1m[35m (1.0ms)[0m              SELECT sql
+  [1m[35m (0.0ms)[0m              SELECT sql
             FROM sqlite_master
             WHERE name='index_users_on_email' AND type='index'
             UNION ALL
@@ -22075,55 +21854,9 @@ Migrating to CreateProducts (20160506024808)
 
 
 
-Started GET "/products" for ::1 at 2016-05-05 22:50:05 -0400
+Started GET "/" for 127.0.0.1 at 2016-05-06 19:03:40 -0400
   [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
-Processing by ProductsController#index as HTML
-  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products"[0m
-  Rendered products/index.html.erb within layouts/application (10.0ms)
-Completed 200 OK in 327ms (Views: 315.6ms | ActiveRecord: 1.0ms)
-
-
-Started GET "/products" for ::1 at 2016-05-05 22:52:38 -0400
-Processing by ProductsController#index as HTML
-  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products"
-  Rendered products/index.html.erb within layouts/application (13.0ms)
-Completed 200 OK in 320ms (Views: 317.3ms | ActiveRecord: 1.0ms)
-
-
-Started GET "/products/new" for ::1 at 2016-05-05 22:52:57 -0400
-Processing by ProductsController#new as HTML
-  Rendered products/_form.html.erb (17.0ms)
-  Rendered products/new.html.erb within layouts/application (72.1ms)
-Completed 200 OK in 381ms (Views: 367.0ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/products" for ::1 at 2016-05-05 22:53:11 -0400
-Processing by ProductsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L76Wk511p32oaMhku5FXKF/vnppxEKF7opFSdlUh6tK8UVte5JMTJCWEdcYEKy2a2+W+AcxZQATcDN7XI6vtcQ==", "product"=>{"name"=>"Firmin", "description"=>"something", "price"=>"12.55", "image"=>"http://placekitten.com/150/150"}, "commit"=>"Create Product"}
-  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
-  [1m[35mSQL (2.0ms)[0m  INSERT INTO "products" ("name", "description", "price", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Firmin"], ["description", "something"], ["price", 12.55], ["image", "http://placekitten.com/150/150"], ["created_at", "2016-05-06 02:53:11.461481"], ["updated_at", "2016-05-06 02:53:11.461481"]]
-  [1m[36m (101.1ms)[0m  [1mcommit transaction[0m
-Redirected to http://localhost:3000/products/1
-Completed 302 Found in 125ms (ActiveRecord: 103.2ms)
-
-
-Started GET "/products/1" for ::1 at 2016-05-05 22:53:11 -0400
-Processing by ProductsController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[35mProduct Load (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
-  Rendered products/show.html.erb within layouts/application (9.0ms)
-Completed 200 OK in 330ms (Views: 325.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/products" for ::1 at 2016-05-05 22:53:14 -0400
-Processing by ProductsController#index as HTML
-  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products"[0m
-  Rendered products/index.html.erb within layouts/application (9.0ms)
-Completed 200 OK in 336ms (Views: 334.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/products" for ::1 at 2016-05-05 22:53:56 -0400
-Processing by ProductsController#index as HTML
-  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products"
-  Rendered products/index.html.erb within layouts/application (12.0ms)
-Completed 200 OK in 310ms (Views: 307.2ms | ActiveRecord: 1.0ms)
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 7]]
+Completed 200 OK in 162ms (Views: 143.9ms | ActiveRecord: 1.5ms)
