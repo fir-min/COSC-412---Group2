@@ -1,15 +1,15 @@
 #Bryan- changed adapter from sqlite3 to mysql2
 default: &default
+  pool: 5
+  timeout: 5000
+development:
+  <<: *default
   adapter: sqlite3
   encoding: utf8
   username: admin
   password: password
   host: localhost
   socket: /tmp/mysql.sock
-  pool: 5
-  timeout: 5000
-development:
-  <<: *default
   database: group2_development
 
 # Warning: The database defined as "test" will be erased and
@@ -21,4 +21,10 @@ test:
 
 production:
   <<: *default
-  database: #db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  username: "<%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>"
+  password: "<%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>"
+  host: "<%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>"
+  port: "<%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>"
+  database: "<%=ENV['OPENSHIFT_APP_NAME']%>"
