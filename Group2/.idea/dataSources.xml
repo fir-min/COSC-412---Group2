@@ -2,12 +2,12 @@
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" hash="222315828">
     <data-source source="LOCAL" name="Rails Group2: development" uuid="ce0a748a-a288-4a33-abed-37349468531e">
-      <driver-ref>f2afe49f-2b96-48c0-94a0-1940c90c28e7</driver-ref>
+      <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Ted\Documents\School Related\Spring 2016\COSC 412 - 450\Project\CodedGit\COSC-412---Group2\Group2\group2_development</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\ljay\COSC-412---Group2\Group2\group2_development</jdbc-url>
       <explain-plan-config>
         <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
       </explain-plan-config>
@@ -19,14 +19,6 @@
         <property name="characterSetResults" value="utf8" />
         <property name="yearIsDateType" value="false" />
       </driver-properties>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/xerial-sqlite-license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/sqlite-jdbc-3.8.9.jar</url>
-        </library>
-      </libraries>
     </data-source>
   </component>
 </project>
