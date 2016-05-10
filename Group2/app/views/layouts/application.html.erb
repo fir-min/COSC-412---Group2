@@ -49,7 +49,7 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <% if user_signed_in? %>
-
+              <li><%= link_to "Messages", conversations_path%></li>
               <% case current_user.user_type_id
                    when 1%>
                   <li><%= link_to 'Create New User', new_user_path %></li>
@@ -60,11 +60,11 @@
                   <li><%= link_to 'Manage Users that are Watchers id = 5', users_path %></li>
               <% when 3 %>
                   <li><%= link_to 'View Purchases', purchases_path %></li>
-                  <li><%= link_to 'Request Purchases', purchases_path %></li>
+
               <% when 4 %>
-                  <li><%= link_to 'Make Purchase', purchases_path %></li>
-                  <li><%= link_to 'View Purchase Queue', purchases_path %></li>
-                  <li><%= link_to 'Update Purchase Queue', purchases_path %></li>
+                  <li><%= link_to 'Products', products_path %></li>
+                  <li><%= link_to 'Cart', '/cart' %></li>
+
               <% when 5 %>
                   <li><%= link_to 'View Transactions', charges_path %></li>
               <% when 6 %>
@@ -72,15 +72,25 @@
                   <li><%= link_to 'Audit', '/audit/audit' %></li>
                   <li><%= link_to 'Note', '/audit/note' %></li>
                   <li><%= link_to 'InTest', '/inventories' %></li>
+              <% when 7 %>
+                  <li><%= link_to 'Products', products_path %></li>
+
+
               <% else %>
                   <p><%=  "You have no user roles." %></p>
               <%  end %>
+            </ul>
+            <ul class="nav navbar-nav", style="float:right">
               <li><%= link_to "Sign Out", destroy_user_session_path%></li>
-
+            </ul>
             <% else %>
-                  <li><%= link_to("Sign In", new_user_session_path)%></li>
-            <% end %>
           </ul>
+              <ul class="nav navbar-nav", style="float:right">
+                  <li><%= link_to "Sign In", new_user_session_path%></li>
+              </ul>
+
+            <% end %>
+
         </div>
       </div>
     </div>
