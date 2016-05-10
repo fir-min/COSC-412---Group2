@@ -18,7 +18,7 @@
 
 <%= form_tag conversation_messages_path(@conversation), method: :post do %>
   <div>
-    <%= text_area_tag :body%>
+    <%= text_area :body%>
   </div>
   <%= submit_tag "Send"%>
 <% end %>
