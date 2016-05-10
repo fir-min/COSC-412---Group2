@@ -1,0 +1,11 @@
+
+<%= form_tag("/audit/request_doc", method: "get") do %>
+
+    <b><p><%= label_tag(:purchases_start, "Start Date") %>  <%= date_field(:purchases, :start) %> &nbsp;&nbsp;    <%= label_tag(:purchases_end, "End Date") %>&nbsp;<%= date_field(:purchases, :end) %> </p></b>
+
+
+    <br/>
+    <%= label_tag(:deptNo1, "DeptNo") %>
+    <%= text_field_tag(:deptNo) %>
+    <%= submit_tag("Submit") %>
+<% end %>

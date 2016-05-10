@@ -1,1 +1,10 @@
-<h1> Note Page </h1>
+<h1> Note Page <%= @temp %></h1>
+<%= form_tag("/audit/note", method: "get") do %>
+
+
+
+    <%= label_tag(:noteText2, "Enter your Note") %> <br/>
+    <%= text_area_tag(:noteText,"", size: "24x6") %>
+
+    <%= submit_tag("Submit") %>
+<% end %>
