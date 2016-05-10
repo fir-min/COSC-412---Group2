@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+ .fsa-pages {
+    float: left;
+    
+  }
+ .fsa-auth {
+    float: right;
+    
+  }

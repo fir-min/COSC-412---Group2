@@ -45,12 +45,41 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Group2</a>
+        <%= link_to 'Group2',  root_path, :class => 'navbar-brand' %>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <% if user_signed_in? %>
+
+              <% case current_user.user_type_id
+                   when 1%>
+                  <li><%= link_to 'Create New User', new_user_path %></li>
+                  <li><%= link_to 'Manage Users', users_path %></li>
+                  <li><%= link_to 'Manage Budget', budgets_path %></li>
+              <% when 2 %>
+                  <li><%= link_to 'Manage Agent\'s Budget', budgets_path %></li>
+                  <li><%= link_to 'Manage Users that are Watchers id = 5', users_path %></li>
+              <% when 3 %>
+                  <li><%= link_to 'View Purchases', purchases_path %></li>
+                  <li><%= link_to 'Request Purchases', purchases_path %></li>
+              <% when 4 %>
+                  <li><%= link_to 'Make Purchase', purchases_path %></li>
+                  <li><%= link_to 'View Purchase Queue', purchases_path %></li>
+                  <li><%= link_to 'Update Purchase Queue', purchases_path %></li>
+              <% when 5 %>
+                  <li><%= link_to 'View Transactions', charges_path %></li>
+              <% when 6 %>
+                  <li><%= link_to 'Request Document', '/audit/request_doc' %></li>
+                  <li><%= link_to 'Audit', '/audit/audit' %></li>
+                  <li><%= link_to 'Note', '/audit/note' %></li>
+                  <li><%= link_to 'InTest', '/inventories' %></li>
+              <% else %>
+                  <p><%=  "You have no user roles." %></p>
+              <%  end %>
+              <li><%= link_to "Sign Out", destroy_user_session_path%></li>
+
+            <% else %>
+                  <li><%= link_to("Sign In", new_user_session_path)%></li>
+            <% end %>
           </ul>
         </div>
       </div>
@@ -59,7 +88,6 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
-          <%= bootstrap_flash %>
           <%= yield %>
         </div>
         <div class="col-lg-3">
