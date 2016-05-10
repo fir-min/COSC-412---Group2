@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_filter :authenticate_user!, :validate_user
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -62,6 +63,14 @@ class ProductsController < ApplicationController
   end
 
   private
+    #makes sure this page is available for the right user only
+    def validate_user
+      if user_signed_in?
+        if (current_user.user_type_id != 4)
+          redirect_to root_path
+        end
+      end
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
