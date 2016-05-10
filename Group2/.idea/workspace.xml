@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d02cb4f-d823-4fdc-ac7e-8bffb32ae5f8" name="Default" comment="Deleted random blue streaks.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/group2_development" afterPath="$PROJECT_DIR$/group2_development" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/AY/AYsKIMi5QHozTBgKuZokeOYUC7o_ZkmjHagnj693G3Y.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/AY/AYsKIMi5QHozTBgKuZokeOYUC7o_ZkmjHagnj693G3Y.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/_8/_8yylZtKTw-Nj1kWE8paYerW6DCRtvcImMM89XnuHiU.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/_8/_8yylZtKTw-Nj1kWE8paYerW6DCRtvcImMM89XnuHiU.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/hS/hs2TZzJNJGPY38u1M9b3k3XHHBgrdEZyizDks05j_14.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/hS/hs2TZzJNJGPY38u1M9b3k3XHHBgrdEZyizDks05j_14.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ww/wwxFFAEhLsJu5iUKplU_QVHXqBYFufD-MxkglBzJTJ4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ww/wwxFFAEhLsJu5iUKplU_QVHXqBYFufD-MxkglBzJTJ4.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/zQ/zQVZ0bLK4-NA6PoNu91jsJXpDStAEDDnwehxTZXam9A.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/zQ/zQVZ0bLK4-NA6PoNu91jsJXpDStAEDDnwehxTZXam9A.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Group2.iml" afterPath="$PROJECT_DIR$/.idea/Group2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Development__Group2.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Development__Group2.xml" />
+    <list default="true" id="5d02cb4f-d823-4fdc-ac7e-8bffb32ae5f8" name="Default" comment="These are some updates for audit, that will create forms and gather the information from those forms">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/16/16JuZoB23fmOaMxpQaIRV9M6JIEA2g3pWrNQethViz4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/16/16JuZoB23fmOaMxpQaIRV9M6JIEA2g3pWrNQethViz4.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/3S/3S7ZJGyyDl6Eh2DF1Mav9xZdq0SKAIES-xHMHmqnlUM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/3S/3S7ZJGyyDl6Eh2DF1Mav9xZdq0SKAIES-xHMHmqnlUM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/CJ/CJ1zscOjZYbVILkcTQPbpsP65zqra8hKGpRLZLNCNK0.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/CJ/CJ1zscOjZYbVILkcTQPbpsP65zqra8hKGpRLZLNCNK0.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/I-/I-E_ASn6XDtu2dxvaIuGsWTuzt1mV3wmXpbcnBxdA-Q.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/I-/I-E_ASn6XDtu2dxvaIuGsWTuzt1mV3wmXpbcnBxdA-Q.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/KO/kobvXt2wW9y0pQ-c6Fc5i6n7AvjJg2Pgkm0KfZQ1xeg.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/KO/kobvXt2wW9y0pQ-c6Fc5i6n7AvjJg2Pgkm0KfZQ1xeg.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Or/OrFKvzv0LMPgkrtMRICRisIa3TxyDjNjlUYKu-NE5FU.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Or/OrFKvzv0LMPgkrtMRICRisIa3TxyDjNjlUYKu-NE5FU.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/S1/S1GlFmlc_M_qo8Qk-roHO0fPX7Mdg-3OYFLgoiVcxK8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/S1/S1GlFmlc_M_qo8Qk-roHO0fPX7Mdg-3OYFLgoiVcxK8.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Uj/Uji9W8OYqjm3j9g4H8fJRvniY0sZds4VqT2X1z3IRZU.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Uj/Uji9W8OYqjm3j9g4H8fJRvniY0sZds4VqT2X1z3IRZU.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/XN/XNekCdi_EcxM4GiFTb2pByCD53SFbzpZPTWlPyfkKrU.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/XN/XNekCdi_EcxM4GiFTb2pByCD53SFbzpZPTWlPyfkKrU.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/_c/_cK_KZFFEApCiFx-WHjTnUaEySHzbfrs1weDEWXSsxY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/_c/_cK_KZFFEApCiFx-WHjTnUaEySHzbfrs1weDEWXSsxY.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/uO/uORDrfzcglmVdLvHeSAjrcacT8acQe0XeFvHCuzVx3o.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/uO/uORDrfzcglmVdLvHeSAjrcacT8acQe0XeFvHCuzVx3o.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/xC/XCLFYnNHHqr-snuZgDNBNbPSkPKiMVkho93MnNQFcwg.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/xC/XCLFYnNHHqr-snuZgDNBNbPSkPKiMVkho93MnNQFcwg.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/audit_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/audit_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/audit/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/audit/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/audit/note.html.erb" afterPath="$PROJECT_DIR$/app/views/audit/note.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/audit/request_doc.html.erb" afterPath="$PROJECT_DIR$/app/views/audit/request_doc.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" />
     </list>
     <ignored path="Group2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -982,7 +982,7 @@
       <workItem from="1462492263310" duration="6235000" />
       <workItem from="1462772795970" duration="920000" />
       <workItem from="1462900254889" duration="313000" />
-      <workItem from="1462904304674" duration="9998000" />
+      <workItem from="1462904304674" duration="10088000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to the file that I created to get the project working on my machine. Mainly bundler installer, and the gemfile edit">
       <created>1459560577526</created>
@@ -1040,11 +1040,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462900552299</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="These are some updates for audit, that will create forms and gather the information from those forms">
+      <created>1462919647605</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1462919647605</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46740000" />
+    <option name="totallyTimeSpent" value="46830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2186" height="1386" extended-state="6" />
@@ -1089,7 +1096,8 @@
     <MESSAGE value="This is my commit with the error. I am trying to make the file redirect after the deletion. On the same page but it will not work." />
     <MESSAGE value="This has the user name, name updates" />
     <MESSAGE value="Deleted random blue streaks." />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted random blue streaks." />
+    <MESSAGE value="These are some updates for audit, that will create forms and gather the information from those forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="These are some updates for audit, that will create forms and gather the information from those forms" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
