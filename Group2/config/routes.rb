@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/cart' => 'cart#index'
+
   root 'home#home'
   resources :products
   devise_for :users do
@@ -19,7 +21,11 @@ Rails.application.routes.draw do
   resources :conversations do
     resources :messages
   end
+  
 
+  get '/cart' => 'cart#index'
+  get '/cart/clear' => 'cart#clearCart'
+  get '/cart/:id' => 'cart#add'
 
 
 
