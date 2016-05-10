@@ -31516,3 +31516,2195 @@ Processing by CartController#index as HTML
   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
   Rendered cart/index.html.erb within layouts/application (3.8ms)
 Completed 200 OK in 91ms (Views: 89.0ms | ActiveRecord: 0.4ms)
+  [1m[36m (156.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (86.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20160401181812)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (8.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160401181812"]]
+  [1m[36m (104.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddUserTypeIdToUser (20160404043314)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (3.0ms)[0m  [1mALTER TABLE "users" ADD "user_type_id" integer[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160404043314"]]
+  [1m[36m (111.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateInventories (20160407233105)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "inventories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "price" float, "stock" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160407233105"]]
+  [1m[36m (81.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePurchases (20160407233327)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (16.0ms)[0m  [1mCREATE TABLE "purchases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price" float, "item_number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160407233327"]]
+  [1m[36m (173.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddItemNumberToInventories (20160407233440)
+  [1m[35m (2.0ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mALTER TABLE "inventories" ADD "item_number" integer[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160407233440"]]
+  [1m[36m (91.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddUserIdToPurchases (20160407233612)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (5.0ms)[0m  [1mALTER TABLE "purchases" ADD "user_id" integer[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160407233612"]]
+  [1m[36m (92.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateRoles (20160414170531)
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160414170531"]]
+  [1m[36m (94.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUserTypes (20160414170655)
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "user_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160414170655"]]
+  [1m[36m (96.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUserTypeRoles (20160414170919)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "user_type_roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_type_id" integer, "role_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_user_type_roles_on_user_type_id" ON "user_type_roles" ("user_type_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_type_roles_on_user_type_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_type_roles_on_user_type_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  CREATE  INDEX "index_user_type_roles_on_role_id" ON "user_type_roles" ("role_id")
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160414170919"]]
+  [1m[35m (99.1ms)[0m  commit transaction
+Migrating to CreateBudgetManages (20160425065111)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (9.0ms)[0m  CREATE TABLE "budget_manages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "department" varchar, "deptno" integer, "amount" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160425065111"]]
+  [1m[35m (153.2ms)[0m  commit transaction
+Migrating to AddImageToInventory (20160429163101)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  ALTER TABLE "inventories" ADD "image" varchar
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160429163101"]]
+  [1m[35m (192.3ms)[0m  commit transaction
+Migrating to CreateMailboxer (20160503050022)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (4.0ms)[0m  CREATE TABLE "mailboxer_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar DEFAULT '', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "mailboxer_receipts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "receiver_id" integer, "receiver_type" varchar, "notification_id" integer NOT NULL, "is_read" boolean DEFAULT 'f', "trashed" boolean DEFAULT 'f', "deleted" boolean DEFAULT 'f', "mailbox_type" varchar(25), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "mailboxer_notifications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar, "body" text, "subject" varchar DEFAULT '', "sender_id" integer, "sender_type" varchar, "conversation_id" integer, "draft" boolean DEFAULT 'f', "notification_code" varchar, "notified_object_id" integer, "notified_object_type" varchar, "attachment" varchar, "updated_at" datetime NOT NULL, "created_at" datetime NOT NULL, "global" boolean DEFAULT 'f', "expires" datetime) 
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_mailboxer_receipts_on_notification_id" ON "mailboxer_receipts" ("notification_id")[0m
+  [1m[35m (0.0ms)[0m  CREATE  INDEX "index_mailboxer_notifications_on_conversation_id" ON "mailboxer_notifications" ("conversation_id")
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160503050022"]]
+  [1m[35m (178.3ms)[0m  commit transaction
+Migrating to AddConversationOptout (20160503050023)
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "mailboxer_conversation_opt_outs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "unsubscriber_id" integer, "unsubscriber_type" varchar, "conversation_id" integer) 
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160503050023"]]
+  [1m[35m (137.2ms)[0m  commit transaction
+Migrating to AddMissingIndices (20160503050024)
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  CREATE  INDEX "index_mailboxer_conversation_opt_outs_on_unsubscriber_id_type" ON "mailboxer_conversation_opt_outs" ("unsubscriber_id", "unsubscriber_type")
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_conversation_opt_outs_on_unsubscriber_id_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_conversation_opt_outs_on_unsubscriber_id_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  CREATE  INDEX "index_mailboxer_conversation_opt_outs_on_conversation_id" ON "mailboxer_conversation_opt_outs" ("conversation_id")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_notifications_on_conversation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_notifications_on_conversation_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_mailboxer_notifications_on_type" ON "mailboxer_notifications" ("type")
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_notifications_on_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_notifications_on_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_notifications_on_conversation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_notifications_on_conversation_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_mailboxer_notifications_on_sender_id_and_sender_type" ON "mailboxer_notifications" ("sender_id", "sender_type")[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_notifications_on_sender_id_and_sender_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_notifications_on_sender_id_and_sender_type' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_notifications_on_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_notifications_on_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_notifications_on_conversation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_notifications_on_conversation_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_mailboxer_notifications_on_notified_object_id_and_type" ON "mailboxer_notifications" ("notified_object_id", "notified_object_type")[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_receipts_on_notification_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_receipts_on_notification_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_mailboxer_receipts_on_receiver_id_and_receiver_type" ON "mailboxer_receipts" ("receiver_id", "receiver_type")[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160503050024"]]
+  [1m[36m (88.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddDeliveryTrackingInfoToMailboxerReceipts (20160503050025)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (3.0ms)[0m  [1mALTER TABLE "mailboxer_receipts" ADD "is_delivered" boolean DEFAULT 'f'[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "mailboxer_receipts" ADD "delivery_method" varchar
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "mailboxer_receipts" ADD "message_id" varchar[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160503050025"]]
+  [1m[36m (69.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddNameToUser (20160503071555)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mALTER TABLE "users" ADD "name" text[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160503071555"]]
+  [1m[36m (78.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProducts (20160506024808)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "price" float, "image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160506024808"]]
+  [1m[36m (68.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_conversation_opt_outs_on_conversation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_conversation_opt_outs_on_conversation_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_conversation_opt_outs_on_unsubscriber_id_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_conversation_opt_outs_on_unsubscriber_id_type' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_notifications_on_notified_object_id_and_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_notifications_on_notified_object_id_and_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_notifications_on_sender_id_and_sender_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_notifications_on_sender_id_and_sender_type' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_notifications_on_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_notifications_on_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_notifications_on_conversation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_notifications_on_conversation_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_receipts_on_receiver_id_and_receiver_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_receipts_on_receiver_id_and_receiver_type' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_mailboxer_receipts_on_notification_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_mailboxer_receipts_on_notification_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_type_roles_on_role_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_type_roles_on_role_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_type_roles_on_user_type_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_type_roles_on_user_type_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'test@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "test@gmail.com"], ["encrypted_password", "$2a$10$AnXb.rqLrE5hqZyWHcoiWus6FJSiW7reImuiWyhJK405vTDvk6nRm"], ["name", "ted"], ["created_at", "2016-05-10 20:04:35.888735"], ["updated_at", "2016-05-10 20:04:35.888735"]]
+  [1m[36m (166.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "user_type_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "admin@gmail.com"], ["encrypted_password", "$2a$10$chkH7oyjimZvZMi3PnsA6ejGNwnO8K6dlFK8x53GJIX9SdSSLoRCW"], ["user_type_id", 1], ["name", "jay"], ["created_at", "2016-05-10 20:04:36.220220"], ["updated_at", "2016-05-10 20:04:36.220220"]]
+  [1m[36m (138.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'manager@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "user_type_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "manager@gmail.com"], ["encrypted_password", "$2a$10$MZlgnTGk39W2qk.G6S/jqu59h7xVgfWeLjRK1q8M0qusK.IJy68cK"], ["user_type_id", 2], ["name", "firms"], ["created_at", "2016-05-10 20:04:36.467581"], ["updated_at", "2016-05-10 20:04:36.467581"]]
+  [1m[36m (154.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'supervisor@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "user_type_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "supervisor@gmail.com"], ["encrypted_password", "$2a$10$B.s9kTG1lFXQU.mJ2nV.4OrTbCDvbjS77DGBnLzvU/0k1RXazPucu"], ["user_type_id", 3], ["name", "karyl"], ["created_at", "2016-05-10 20:04:36.739980"], ["updated_at", "2016-05-10 20:04:36.739980"]]
+  [1m[36m (126.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'agent@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "user_type_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "agent@gmail.com"], ["encrypted_password", "$2a$10$qtZbI4f4vb1uz45ornipre.zLJGBi1c70P4basIi6rySzqcSQ8zPu"], ["user_type_id", 4], ["name", "dayna"], ["created_at", "2016-05-10 20:04:36.986341"], ["updated_at", "2016-05-10 20:04:36.986341"]]
+  [1m[36m (79.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'watcher@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "user_type_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "watcher@gmail.com"], ["encrypted_password", "$2a$10$JMZY.8NQywUMQzpws0oAuOvSRhrFpKuy4iX7D.0JbTkDYiNYZRlcm"], ["user_type_id", 5], ["name", "brian"], ["created_at", "2016-05-10 20:04:37.178621"], ["updated_at", "2016-05-10 20:04:37.178621"]]
+  [1m[36m (99.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'auditor@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "user_type_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["email", "auditor@gmail.com"], ["encrypted_password", "$2a$10$8QCQpYJe65m9i1aSxyyrGeoPtFByadDAgwdOsYOiJJjM3wlVo8fI6"], ["user_type_id", 6], ["name", "aryn"], ["created_at", "2016-05-10 20:04:37.389933"], ["updated_at", "2016-05-10 20:04:37.389933"]]
+  [1m[36m (145.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for ::1 at 2016-05-10 16:09:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 2603ms (Views: 2566.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-05-10 16:09:34 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (275.4ms)
+Completed 200 OK in 1102ms (Views: 1009.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-05-10 16:09:47 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kp1vEuvB8cuVk0VdE4NQG2Tf/pDpT+iXhRYZXhsezqo6UrcNBT/FXbcJEZYg4PRlwssVAJC0MNmG1t7a/kkNrA==", "user"=>{"email"=>"agent@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "agent@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-05-10 20:09:47.628236"], ["current_sign_in_at", "2016-05-10 20:09:47.628236"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2016-05-10 20:09:47.633245"], ["id", 5]]
+  [1m[36m (78.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 956ms (ActiveRecord: 81.1ms)
+
+
+Started GET "/" for ::1 at 2016-05-10 16:09:48 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 200 OK in 565ms (Views: 563.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2016-05-10 16:09:59 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 623ms (Views: 606.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/new" for ::1 at 2016-05-10 16:10:02 -0400
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered products/_form.html.erb (11.0ms)
+  Rendered products/new.html.erb within layouts/application (86.1ms)
+Completed 200 OK in 669ms (Views: 650.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for ::1 at 2016-05-10 16:10:43 -0400
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YpoMwIR2q9V0yszG0DWDrIlZ+wQost8zMEWoNNU6D94kkHaghIwMwT35pm6uqL8GB+eJH/f6t/VkfXbJDBgzKQ==", "product"=>{"name"=>"testing", "description"=>"something", "price"=>"19.99", "image"=>"http://placekitten.com/150/150"}, "commit"=>"Create Product"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "products" ("name", "description", "price", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "testing"], ["description", "something"], ["price", 19.99], ["image", "http://placekitten.com/150/150"], ["created_at", "2016-05-10 20:10:43.138523"], ["updated_at", "2016-05-10 20:10:43.138523"]]
+  [1m[36m (149.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 204ms (ActiveRecord: 152.2ms)
+
+
+Started GET "/products/1" for ::1 at 2016-05-10 16:10:43 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 660ms (Views: 576.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for ::1 at 2016-05-10 16:10:46 -0400
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 581ms (Views: 574.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for ::1 at 2016-05-10 16:10:52 -0400
+Processing by ProductsController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered products/_form.html.erb (13.0ms)
+  Rendered products/new.html.erb within layouts/application (85.1ms)
+Completed 200 OK in 649ms (Views: 643.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/products" for ::1 at 2016-05-10 16:11:05 -0400
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Si7DmqMVkH7gOV+hN9sAMgMtDDizk68n3GrI1YuKQWTIsFuanbxVbKzj9b6QlCqRrLGKz2GJnrLSXXejwwV8g==", "product"=>{"name"=>"aa", "description"=>"bbbbbbb", "price"=>"5.99", "image"=>"http://placekitten.com/150/150"}, "commit"=>"Create Product"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "aa"], ["description", "bbbbbbb"], ["price", 5.99], ["image", "http://placekitten.com/150/150"], ["created_at", "2016-05-10 20:11:05.081654"], ["updated_at", "2016-05-10 20:11:05.081654"]]
+  [1m[35m (128.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 150ms (ActiveRecord: 133.2ms)
+
+
+Started GET "/products/2" for ::1 at 2016-05-10 16:11:05 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mProduct Load (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 535ms (Views: 527.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for ::1 at 2016-05-10 16:11:08 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 566ms (Views: 559.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cart/1" for ::1 at 2016-05-10 16:11:12 -0400
+Processing by CartController#add as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Redirected to http://localhost:3000/cart
+Completed 302 Found in 11ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/cart" for ::1 at 2016-05-10 16:11:12 -0400
+Processing by CartController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered charges/_new.html.erb (2.0ms)
+  Rendered cart/index.html.erb within layouts/application (195.3ms)
+Completed 200 OK in 773ms (Views: 765.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cart/2" for ::1 at 2016-05-10 16:11:19 -0400
+Processing by CartController#add as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Redirected to http://localhost:3000/cart
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cart" for ::1 at 2016-05-10 16:11:19 -0400
+Processing by CartController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mProduct Load (1.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered charges/_new.html.erb (1.0ms)
+  Rendered cart/index.html.erb within layouts/application (70.1ms)
+Completed 200 OK in 639ms (Views: 632.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cart/2" for ::1 at 2016-05-10 16:11:25 -0400
+Processing by CartController#add as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Redirected to http://localhost:3000/cart
+Completed 302 Found in 29ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cart" for ::1 at 2016-05-10 16:11:25 -0400
+Processing by CartController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mProduct Load (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered charges/_new.html.erb (1.0ms)
+  Rendered cart/index.html.erb within layouts/application (78.1ms)
+Completed 200 OK in 638ms (Views: 632.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/2" for ::1 at 2016-05-10 16:11:29 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 557ms (Views: 549.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cart" for ::1 at 2016-05-10 16:13:01 -0400
+Processing by CartController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (1.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered charges/_new.html.erb (3.0ms)
+  Rendered cart/index.html.erb within layouts/application (76.1ms)
+Completed 200 OK in 718ms (Views: 711.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:03 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:04 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:13:05 -0400
+
+
+Started GET "/cart" for ::1 at 2016-05-10 16:13:37 -0400
+Processing by CartController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mProduct Load (1.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered charges/_new.html.erb (3.0ms)
+  Rendered cart/index.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 626ms (Views: 620.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:38 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:13:38 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:13:38 -0400
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:38 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:13:38 -0400
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:38 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:38 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:13:38 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:38 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:38 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:38 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:38 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:39 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:40 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:40 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:13:40 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:13:40 -0400
+
+
+Started POST "/charges" for ::1 at 2016-05-10 16:14:13 -0400
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fn69oPdAtMsoYlQNrlOXkOnag1wj0QEJOxJESs7XjRNQdMfA97oT32FRPqXQzqs6Z2TxR/yZac9vKpq3F/Wx5A==", "stripeToken"=>"tok_189hF9AwLxX2advj75EBNCC2", "stripeTokenType"=>"card", "stripeEmail"=>"firminsa@mgil.com"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered charges/create.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1856ms (Views: 540.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cart" for ::1 at 2016-05-10 16:16:24 -0400
+Processing by CartController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mProduct Load (1.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered charges/_new.html.erb (1.0ms)
+  Rendered cart/index.html.erb within layouts/application (76.1ms)
+Completed 200 OK in 667ms (Views: 624.4ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/charges" for ::1 at 2016-05-10 16:16:53 -0400
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e2vrYytCDZRvANcdZAbi7Umg03euraVY4R8XiS8/fK89YZEDK7iqgCYzvbUam95Hxx6hbHHlzZ61J8l09h1AWA==", "stripeToken"=>"tok_189hHjAwLxX2advjQrHQpWEN", "stripeTokenType"=>"card", "stripeEmail"=>"firminsa@gmail.com"}
+Completed 500 Internal Server Error in 1033ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (Invalid integer: 3197.0):
+  app/controllers/charges_controller.rb:16:in `create'
+
+
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2018.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1789.6ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (4276.3ms)
+
+
+Started POST "/charges" for ::1 at 2016-05-10 16:20:46 -0400
+
+SyntaxError (C:/Users/FIRMS/Documents/GitHub/COSC-412---Group2/Group2/app/controllers/charges_controller.rb:18: syntax error, unexpected ( arg, expecting keyword_do or '{' or '('
+	    :amount      => Integer ($amount*100),
+	                             ^
+C:/Users/FIRMS/Documents/GitHub/COSC-412---Group2/Group2/app/controllers/charges_controller.rb:18: syntax error, unexpected ',', expecting keyword_end
+	    :amount      => Integer ($amount*100),
+	                                          ^
+C:/Users/FIRMS/Documents/GitHub/COSC-412---Group2/Group2/app/controllers/charges_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+	    :description => 'Rails Stripe customer',
+	                                            ^
+C:/Users/FIRMS/Documents/GitHub/COSC-412---Group2/Group2/app/controllers/charges_controller.rb:21: syntax error, unexpected ')', expecting keyword_end
+	  )
+	   ^
+C:/Users/FIRMS/Documents/GitHub/COSC-412---Group2/Group2/app/controllers/charges_controller.rb:23: syntax error, unexpected =>
+	rescue Stripe::CardError => e
+	                           ^):
+  app/controllers/charges_controller.rb:18: syntax error, unexpected ( arg, expecting keyword_do or '{' or '('
+  app/controllers/charges_controller.rb:18: syntax error, unexpected ',', expecting keyword_end
+  app/controllers/charges_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+  app/controllers/charges_controller.rb:21: syntax error, unexpected ')', expecting keyword_end
+  app/controllers/charges_controller.rb:23: syntax error, unexpected =>
+
+
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2046.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1832.7ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (4241.2ms)
+
+
+Started GET "/cart" for ::1 at 2016-05-10 16:21:58 -0400
+Processing by CartController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered charges/_new.html.erb (1.0ms)
+  Rendered cart/index.html.erb within layouts/application (121.2ms)
+Completed 200 OK in 867ms (Views: 822.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:22:00 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:22:01 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:22:02 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:22:02 -0400
+
+
+Started POST "/charges" for ::1 at 2016-05-10 16:22:22 -0400
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9/ALYRAFgLZfGdv3Hm0RCPaTcew1rqVY2Pdmht0HRhSx+nEBEP8nohYqsV9g8C2ieC0D9+rmzZ6Mz7h7BCV64w==", "stripeToken"=>"tok_189hN1AwLxX2advjdVKcObyH", "stripeTokenType"=>"card", "stripeEmail"=>"firminsa@gmail.com"}
+  Rendered charges/create.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 1828ms (Views: 575.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/charges" for ::1 at 2016-05-10 16:27:21 -0400
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9/ALYRAFgLZfGdv3Hm0RCPaTcew1rqVY2Pdmht0HRhSx+nEBEP8nohYqsV9g8C2ieC0D9+rmzZ6Mz7h7BCV64w==", "stripeToken"=>"tok_189hN1AwLxX2advjdVKcObyH", "stripeTokenType"=>"card", "stripeEmail"=>"firminsa@gmail.com"}
+Completed 500 Internal Server Error in 962ms (ActiveRecord: 0.0ms)
+
+Stripe::InvalidRequestError (You cannot use a Stripe token more than once: tok_189hN1AwLxX2advjdVKcObyH.):
+  app/controllers/charges_controller.rb:11:in `create'
+
+
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2247.3ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (3237.7ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (6100.9ms)
+
+
+Started GET "/" for ::1 at 2016-05-10 16:27:31 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 500 Internal Server Error in 683ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined local variable or method `prodcuts_path' for #<#<Class:0x0000000d2b92f8>:0x0000000d2b8600>):
+    62:                   <li><%= link_to 'View Purchases', purchases_path %></li>
+    63:                   
+    64:               <% when 4 %>
+    65:                   <li><%= link_to 'Products', prodcuts_path %></li>
+    66:                   <li><%= link_to 'Cart', '/cart' %></li>
+    67: 
+    68:               <% when 5 %>
+  app/views/layouts/application.html.erb:65:in `_app_views_layouts_application_html_erb__1651477590_110033960'
+
+
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2161.2ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1813.7ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (4159.1ms)
+
+
+Started GET "/" for ::1 at 2016-05-10 16:27:40 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 500 Internal Server Error in 634ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `prodcuts_path' for #<#<Class:0x0000000d2b92f8>:0x0000000e699de0>):
+    62:                   <li><%= link_to 'View Purchases', purchases_path %></li>
+    63:                   
+    64:               <% when 4 %>
+    65:                   <li><%= link_to 'Products', prodcuts_path %></li>
+    66:                   <li><%= link_to 'Cart', '/cart' %></li>
+    67: 
+    68:               <% when 5 %>
+  app/views/layouts/application.html.erb:65:in `_app_views_layouts_application_html_erb__1651477590_110033960'
+
+
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1992.9ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1779.6ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (4112.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-10 16:27:48 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 500 Internal Server Error in 651ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined local variable or method `prodcuts_path' for #<#<Class:0x0000000d2b92f8>:0x00000004026b70>):
+    62:                   <li><%= link_to 'View Purchases', purchases_path %></li>
+    63:                   
+    64:               <% when 4 %>
+    65:                   <li><%= link_to 'Products', prodcuts_path %></li>
+    66:                   <li><%= link_to 'Cart', '/cart' %></li>
+    67: 
+    68:               <% when 5 %>
+  app/views/layouts/application.html.erb:65:in `_app_views_layouts_application_html_erb__1651477590_110033960'
+
+
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1998.9ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1769.6ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (4061.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-10 16:28:10 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 575ms (Views: 573.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:28:11 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:28:11 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:28:11 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:28:11 -0400
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:28:11 -0400
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:28:11 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:28:11 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:28:11 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:28:11 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:28:11 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:28:12 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:28:13 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:28:13 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:28:13 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:28:13 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:28:13 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:28:13 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:28:13 -0400
+
+
+Started GET "/" for ::1 at 2016-05-10 16:29:58 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 200 OK in 599ms (Views: 594.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:30:00 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:30:01 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:30:02 -0400
+
+
+Started GET "/" for ::1 at 2016-05-10 16:30:03 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 550ms (Views: 546.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:30:04 -0400
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:04 -0400
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:04 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:30:04 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:30:05 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:06 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:30:06 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:06 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:06 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:06 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:06 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:06 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:06 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:06 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:06 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:06 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:06 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:30:06 -0400
+
+
+Started GET "/" for ::1 at 2016-05-10 16:30:37 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 200 OK in 582ms (Views: 580.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:30:38 -0400
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:38 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:30:38 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:30:38 -0400
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:38 -0400
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:38 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:38 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:30:38 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:39 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:40 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:40 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:40 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:40 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:40 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:40 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:40 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:40 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:30:40 -0400
+
+
+Started GET "/" for ::1 at 2016-05-10 16:30:41 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 633ms (Views: 631.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:43 -0400
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:43 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:30:43 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:30:43 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:30:43 -0400
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:43 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:43 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:30:43 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:43 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:43 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:43 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:43 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:44 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:45 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:45 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:45 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:45 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:45 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:30:45 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:30:45 -0400
+
+
+Started GET "/" for ::1 at 2016-05-10 16:31:21 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 200 OK in 599ms (Views: 596.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:31:22 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:31:22 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:31:22 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:31:22 -0400
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:31:22 -0400
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:31:22 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:31:22 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:31:22 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:31:22 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:31:22 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:31:22 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:31:22 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:31:23 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:31:24 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:31:24 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:31:24 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:31:24 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:31:24 -0400
+
+
+Started GET "/" for ::1 at 2016-05-10 16:32:18 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 569ms (Views: 565.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:19 -0400
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:19 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:32:19 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:32:19 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:32:19 -0400
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:19 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:19 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:32:19 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:19 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:19 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:19 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:32:20 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:32:21 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:32:21 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:32:21 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:32:21 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:32:21 -0400
+
+
+Started GET "/" for ::1 at 2016-05-10 16:32:58 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 200 OK in 546ms (Views: 543.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:59 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:32:59 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:32:59 -0400
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:59 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:32:59 -0400
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:59 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:59 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:32:59 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:59 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:32:59 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:00 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:01 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:01 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:01 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:01 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:01 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:33:01 -0400
+
+
+Started GET "/users/sign_out" for ::1 at 2016-05-10 16:33:02 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 121ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-10 16:33:02 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 561ms (Views: 560.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-10 16:33:11 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 556ms (Views: 554.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:33:12 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:33:12 -0400
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:12 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:33:12 -0400
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:13 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:33:14 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:14 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:14 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:14 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:14 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:14 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:14 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:14 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:14 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:14 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:14 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:33:14 -0400
+
+
+Started GET "/" for ::1 at 2016-05-10 16:33:17 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 553ms (Views: 551.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:33:18 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:33:19 -0400
+
+
+Started GET "/" for ::1 at 2016-05-10 16:34:19 -0400
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 563ms (Views: 561.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/budget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/audit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/conversation.self-a4d95f03f212a1daf836859138a5df45e39d238527bacc16a64442185eed687f.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/inventories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/purchases.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/scaffolds.self-a2e7a5e223b701217bbd3cede0c3a1a97ef82cb6f4202d12ed0fedb47b718975.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/user_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:34:20 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/application.self-31025d1fefea4525ce018a7b600336827f3abdccfb1f7751ca901705166c435e.css?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/audit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/budget.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/inventories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/purchases.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:34:21 -0400
+
+
+Started GET "/assets/user_config.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-10 16:34:22 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-10 16:34:22 -0400

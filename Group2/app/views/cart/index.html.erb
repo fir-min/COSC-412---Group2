@@ -21,7 +21,8 @@
 
   <% end %>
 
- 
-  
+
+
 </ul>
-<p><b><%= number_to_currency(total, :unit => '$') %></b></p>
+
+<%= render partial: 'charges/new', locals: {amount: total} %>
