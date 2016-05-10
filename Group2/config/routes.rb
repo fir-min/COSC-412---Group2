@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'home#home'
   resources :products
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
@@ -15,8 +16,6 @@ Rails.application.routes.draw do
   get '/audit/request_doc/' => 'audit#request_doc'
 
   resources :users
-
-  root 'home#home'
   resources :conversations do
     resources :messages
   end
