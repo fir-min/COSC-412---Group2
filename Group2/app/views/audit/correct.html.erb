@@ -1,1 +1,10 @@
-<h1> Correct Page </h1>
+<h1> Correction Page <%= @temp2 %></h1>
+<%= form_tag("/audit/correct", method: "get") do %>
+
+
+
+    <%= label_tag(:correctionText2, "Enter your Note") %> <br/>
+    <%= text_area_tag(:correctionText,"", size: "24x6") %>
+
+    <%= submit_tag("Submit") %>
+<% end %>

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :inventories
   resources :budgets
 
-  get '/audit/audit/' => 'audit#audit'
+
   get '/audit/note/' => 'audit#note'
   get '/audit/correct/' => 'audit#correct'
   get '/audit/request_doc/' => 'audit#request_doc'

@@ -34,22 +34,20 @@ class AuditController < ApplicationController
 
 
   def correct
+    
+      @temp1 = params[:correctionText];
+      
   end
 
 
   def note
-      if params[:noteText] == nil
-        @temp = "Values were empty";
-      else
+      
         @temp = params[:noteText];
 
         #within this case save the variable @temp within a model with the timestamp
-      end
   end
 
-  def audit
-
-  end
+  
 
   def show
 
