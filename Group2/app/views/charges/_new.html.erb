@@ -1,6 +1,6 @@
 <%= form_tag charges_path do %>
 <% $amount = amount %>
-
+<% $cart = cart %>
   <article>
     <% if flash[:error].present? %>
       <div id="error_explanation">
@@ -8,13 +8,13 @@
       </div>
     <% end %>
     <label class="amount">
-      <span><b>Total: $<%=$amount%></b></span>
+      <span><b>Total: $<%=$amount.round(2)%></b></span>
     </label>
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="DOD Payment Portal"
-          data-amount=<%= j (($amount*100).to_s) %>
+          data-amount=<%= j (($amount*100).to_s()) %>
           data-locale="auto"></script>
 <% end %>

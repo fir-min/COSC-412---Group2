@@ -1,5 +1,4 @@
 class PurchasesController < ApplicationController
-  before_filter :authenticate_user!
   before_action :set_purchase, only: [:show, :edit, :update, :destroy]
 
   # GET /purchases
@@ -70,6 +69,6 @@ class PurchasesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def purchase_params
-      params.require(:purchase).permit(:name, :price, :item_number)
+      params.require(:purchase).permit(:user_id, :total)
     end
 end

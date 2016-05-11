@@ -1,5 +1,6 @@
 class ChargesController < ApplicationController
 	$amount
+	$cart
 	def new
 
 	end
@@ -12,7 +13,16 @@ class ChargesController < ApplicationController
 	    :email => params[:stripeEmail],
 	    :source  => params[:stripeToken]
 	  )
-		total = Integer ($amount*100)
+		total = Integer ($amount.round(2)*100)
+		purchase = Purchase.new(:user_id => current_user.id, :total => $amount.round(2))
+		purchase.save
+		$cart.each do |id, quantity|
+			quantity.times do
+				purchase.receipts.create(:product_id => id)
+			end
+		end
+
+
 	  charge = Stripe::Charge.create(
 	    :customer    => customer.id,
 	    :amount      => total,
