@@ -31,13 +31,8 @@ class AuditController < ApplicationController
     end
 
   end
-
-
-  def correct
-    
-      @temp1 = params[:correctionText];
-      
-  end
+  
+  
 
 
   def note
@@ -49,12 +44,6 @@ class AuditController < ApplicationController
 
   
 
-  def show
 
-  end
-
-  def index
-
-  end
 end
 

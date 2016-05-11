@@ -1,0 +1,16 @@
+
+ <h1>Alerts</h1>
+
+<div class="alerts">
+  <div class="container">
+  
+  <% @alerts.each do |alert| %> 
+<div class="alert"> 
+  <p class="content"><%= alert.content %></p> 
+  <p class="time"><%= alert.created_at %></p> 
+</div> 
+<% end %>
+    <%= link_to 'New Alert', "alerts/new" %>
+
+  </div>
+</div>

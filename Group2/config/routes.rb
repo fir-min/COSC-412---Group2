@@ -11,11 +11,16 @@ Rails.application.routes.draw do
   resources :purchases
   resources :inventories
   resources :budgets
+  resources :alerts
 
 
   get '/audit/note/' => 'audit#note'
   get '/audit/correct/' => 'audit#correct'
   get '/audit/request_doc/' => 'audit#request_doc'
+  
+  get '/alerts' => 'alerts#index'
+  get '/alerts/new' => 'alerts#new'
+  post 'alerts' => 'alerts#create'
 
   resources :users
   resources :conversations do
