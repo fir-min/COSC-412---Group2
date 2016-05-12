@@ -5,8 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Qm/Qmh13Pa49d5S9BBgsAaRViowv72zNAjmIdHx_KZC1kM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Qm/Qmh13Pa49d5S9BBgsAaRViowv72zNAjmIdHx_KZC1kM.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ZQ/zQVZ0bLK4-NA6PoNu91jsJXpDStAEDDnwehxTZXam9A.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ZQ/zQVZ0bLK4-NA6PoNu91jsJXpDStAEDDnwehxTZXam9A.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" afterPath="$PROJECT_DIR$/app/views/products/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="Group2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -698,7 +696,7 @@
       <workItem from="1462922450816" duration="1005000" />
       <workItem from="1462954366562" duration="149000" />
       <workItem from="1463016584960" duration="15768000" />
-      <workItem from="1463039162922" duration="2314000" />
+      <workItem from="1463039162922" duration="2322000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to the file that I created to get the project working on my machine. Mainly bundler installer, and the gemfile edit">
       <created>1459560577526</created>
@@ -812,11 +810,18 @@
       <option name="project" value="LOCAL" />
       <updated>1463042030289</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="more layout changes&#10;">
+      <created>1463042306415</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1463042306415</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65136000" />
+    <option name="totallyTimeSpent" value="65144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
