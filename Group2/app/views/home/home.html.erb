@@ -1,6 +1,18 @@
 <h1> Yay!!! we're home</h1>
+<% if signed_in? %>
 
-<% if current_user.user_type_id == 2 %>
+
+
+
+
+
+
+
+
+
+
+
+<% if current_user.user_type_id == 2 %><%# This is generating a home for managers%>
 
 
     <table>
@@ -30,7 +42,7 @@
 
     <br>
     <br>
-    <p> <%= @temper %> </p>
+
     <% if @temp != nil %>
         <p> <%= @temp.email %> </p>
     <% end %>
@@ -43,5 +55,7 @@
     <%= text_field_tag(:auditor) %>
     <%= submit_tag("Submit Change") %>
         <% end %>
+
+<% end %>
 
 <% end %>
