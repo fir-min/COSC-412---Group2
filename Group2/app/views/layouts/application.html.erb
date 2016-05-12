@@ -61,7 +61,7 @@
                  when 1%>
                 <li><%= link_to 'Create New User', new_user_path %></li>
                 <li><%= link_to 'Manage Users', users_path %></li>
-                <li><%= link_to 'Manage Budget', budgets_path %></li>
+                <li><%= link_to 'Manage Budget', '/budgets/new' %></li>
             <% when 2 %>
                 <li><%= link_to 'Manage Agent\'s Budget', budgets_path %></li>
                 <li><%= link_to 'Manage Users that are Watchers id = 5', users_path %></li>
@@ -77,7 +77,7 @@
             <% when 6 %>
 
                 <li><%= link_to 'Send Alert', '/alerts/new' %></li>
-                
+
 
                 <li><%= link_to 'Request Document', '/audit/request_doc' %></li>
 
