@@ -1,49 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d02cb4f-d823-4fdc-ac7e-8bffb32ae5f8" name="Default" comment="more layout changes&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/group2_development" afterPath="$PROJECT_DIR$/group2_development" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/1K/1K-sYpK24WZEtuam5X7xnYJwz_gAirpaYptLUx0Sfbw.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/1K/1K-sYpK24WZEtuam5X7xnYJwz_gAirpaYptLUx0Sfbw.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/74/74drLNAD0N17MqLC2BksooyPn3rqkpzaqm0nvTvR1ZI.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/74/74drLNAD0N17MqLC2BksooyPn3rqkpzaqm0nvTvR1ZI.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/8r/8r1l-TdrtKTPS4tiBdfd2Ki0BWf83asUfHyb6Dm13m8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/8r/8r1l-TdrtKTPS4tiBdfd2Ki0BWf83asUfHyb6Dm13m8.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/97/97_s0O2WFU-dXskHc81QddXstL5n-ju6MMycIHZT_8g.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/97/97_s0O2WFU-dXskHc81QddXstL5n-ju6MMycIHZT_8g.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/9k/9KM60hCIZaALuZCK37Mmr7ooWyREF907eOJZC8spfBY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/9k/9KM60hCIZaALuZCK37Mmr7ooWyREF907eOJZC8spfBY.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/E3/E3mC55i3R_Sn-PBxdLGiLe98xIsWgXTg_NI5sHlwiH4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/E3/E3mC55i3R_Sn-PBxdLGiLe98xIsWgXTg_NI5sHlwiH4.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Fp/fPCsprOTK_z9LWeL4cDn3KqaiHaKhULpT2J8okhEHQM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Fp/fPCsprOTK_z9LWeL4cDn3KqaiHaKhULpT2J8okhEHQM.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/GV/gVmkwDSbNShQbyBxt5lKUpivCdvvRLtv5sDU4ZVC47k.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/GV/gVmkwDSbNShQbyBxt5lKUpivCdvvRLtv5sDU4ZVC47k.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HB/HbUA3AOe57cCaFGVLcAeqyRsCGY29k1ZLUTsTgMRTko.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HB/HbUA3AOe57cCaFGVLcAeqyRsCGY29k1ZLUTsTgMRTko.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ja/ja3raWLKaFrf52hI91Y7MAa173oNa3qlZWjmnChpr5c.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ja/ja3raWLKaFrf52hI91Y7MAa173oNa3qlZWjmnChpr5c.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/OG/oGanUAjjvc5VBIOJUNTJs16slNOb-sdWVH-vCmXb7Xs.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/OG/oGanUAjjvc5VBIOJUNTJs16slNOb-sdWVH-vCmXb7Xs.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Q3/Q37RKTnv2tfdK_hRgQmz2YJaKqV_EXfLl_rS59oP4hk.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Q3/Q37RKTnv2tfdK_hRgQmz2YJaKqV_EXfLl_rS59oP4hk.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/QH/QhtmLsj2FUfFwkF3CipjWiVYQgeYUs2k-PYahVKrBoM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/QH/QhtmLsj2FUfFwkF3CipjWiVYQgeYUs2k-PYahVKrBoM.cache" />
+    <list default="true" id="5d02cb4f-d823-4fdc-ac7e-8bffb32ae5f8" name="Default" comment="The last minute project fixes">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Qm/Qmh13Pa49d5S9BBgsAaRViowv72zNAjmIdHx_KZC1kM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Qm/Qmh13Pa49d5S9BBgsAaRViowv72zNAjmIdHx_KZC1kM.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/SE/Sez8-a0Qa1JfAKzXlkNtbMDa3nvo6aRIqErgyP5hLyU.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/SE/Sez8-a0Qa1JfAKzXlkNtbMDa3nvo6aRIqErgyP5hLyU.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Tz/TzLOo5XahqpVRqW7Q2v3MjLSRtObDlZuvt013VXABJU.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Tz/TzLOo5XahqpVRqW7Q2v3MjLSRtObDlZuvt013VXABJU.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/X3/X3D_zHyO-ZorS0GDMmhrltGSY6uvn8YpRW_NKgLqqoI.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/X3/X3D_zHyO-ZorS0GDMmhrltGSY6uvn8YpRW_NKgLqqoI.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Yi/YiwzYyjS5P4CXtReLJCYJDwH8rJJSbYPwcBVPkMQZ3g.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Yi/YiwzYyjS5P4CXtReLJCYJDwH8rJJSbYPwcBVPkMQZ3g.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/dH/dHmDQsY-a8jglPh_wBfECWwj8q1cNPmedHsRlUpJYao.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/dH/dHmDQsY-a8jglPh_wBfECWwj8q1cNPmedHsRlUpJYao.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/eP/epmTR98ZUGyDgWLqmHXVKMZnDfsS8p3CXF_fsCuktgE.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/eP/epmTR98ZUGyDgWLqmHXVKMZnDfsS8p3CXF_fsCuktgE.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/eR/er0DEnczvVWhMWylmhVXR7HYqg5aPhpHcXm98yx0OYo.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/eR/er0DEnczvVWhMWylmhVXR7HYqg5aPhpHcXm98yx0OYo.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/gq/GQ_xTYq2bu7BK42XpPPdjVhz8dB1fJAVh5jVMROvxq8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/gq/GQ_xTYq2bu7BK42XpPPdjVhz8dB1fJAVh5jVMROvxq8.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/h5/h5MbdjgTxlScGHE7jzCpkg0UZSGz_fNUcmI29Yj3S-8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/h5/h5MbdjgTxlScGHE7jzCpkg0UZSGz_fNUcmI29Yj3S-8.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/hS/hs2TZzJNJGPY38u1M9b3k3XHHBgrdEZyizDks05j_14.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/hS/hs2TZzJNJGPY38u1M9b3k3XHHBgrdEZyizDks05j_14.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/lv/lve1jur0Pfvt9KYT9GwTvyMX_UT12CCbZUmUS6r0DDA.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/lv/lve1jur0Pfvt9KYT9GwTvyMX_UT12CCbZUmUS6r0DDA.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/p8/p8AnyDXFpEW0DSybsJw4s7Z0r-6egBJCI8BTHeup6vk.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/p8/p8AnyDXFpEW0DSybsJw4s7Z0r-6egBJCI8BTHeup6vk.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/pq/pqUJprmn4PauErjI553tcoAaHbJLVZvnkM1cy9_QxAQ.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/pq/pqUJprmn4PauErjI553tcoAaHbJLVZvnkM1cy9_QxAQ.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/qM/Qmh13Pa49d5S9BBgsAaRViowv72zNAjmIdHx_KZC1kM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/qM/Qmh13Pa49d5S9BBgsAaRViowv72zNAjmIdHx_KZC1kM.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/qn/qnb3jxhXzBO7YdDHIRQYWCTX6MPafNotdXWVpO57ufk.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/qn/qnb3jxhXzBO7YdDHIRQYWCTX6MPafNotdXWVpO57ufk.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/rV/rVKXwmRvpaFXh1oHQ4MyfklOMuBx8w18nsPtqNwRRgM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/rV/rVKXwmRvpaFXh1oHQ4MyfklOMuBx8w18nsPtqNwRRgM.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/uO/UouOPBH6P2g4mN3Vv1kDkokg6qpnpmQaBUEKruzLzVg.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/uO/UouOPBH6P2g4mN3Vv1kDkokg6qpnpmQaBUEKruzLzVg.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/v-/v-TOU1M-DhJ0P2ppipbukXB9pT9-b74tRcgIn9andD8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/v-/v-TOU1M-DhJ0P2ppipbukXB9pT9-b74tRcgIn9andD8.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/xT/XTUbFIE95W9SckM4tNtSa24QmBS0DcxEds5wTmycPKo.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/xT/XTUbFIE95W9SckM4tNtSa24QmBS0DcxEds5wTmycPKo.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/yj/yjzcsly-ZXvS_-a9vffBebaRq0bgaCUhtRhLraGd-4A.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/yj/yjzcsly-ZXvS_-a9vffBebaRq0bgaCUhtRhLraGd-4A.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/yq/yq_OPMp57CImZQiN8mTBTp6v6z3LnQY91pchR3y0iqI.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/yq/yq_OPMp57CImZQiN8mTBTp6v6z3LnQY91pchR3y0iqI.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/budgets/new.html.erb" afterPath="$PROJECT_DIR$/app/views/budgets/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/home.html.erb" afterPath="$PROJECT_DIR$/app/views/home/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="Group2.iws" />
@@ -100,8 +61,8 @@
       <file leaf-file-name="home.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="142" column="94" selection-start-line="142" selection-start-column="94" selection-end-line="142" selection-end-column="94" />
+            <state relative-caret-position="380">
+              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -338,28 +299,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Group2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Group2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="purchases" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -809,7 +748,7 @@
       <workItem from="1463064857725" duration="185000" />
       <workItem from="1463065044800" duration="215000" />
       <workItem from="1463065325189" duration="2109000" />
-      <workItem from="1463090968984" duration="1869000" />
+      <workItem from="1463090968984" duration="2380000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to the file that I created to get the project working on my machine. Mainly bundler installer, and the gemfile edit">
       <created>1459560577526</created>
@@ -937,11 +876,18 @@
       <option name="project" value="LOCAL" />
       <updated>1463042314098</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="The last minute project fixes">
+      <created>1463092852773</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1463092852773</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72220000" />
+    <option name="totallyTimeSpent" value="72731000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -999,7 +945,8 @@
     <MESSAGE value="The auditor can request permission from the manager. The manager can approve them too." />
     <MESSAGE value="Fixed the issue caused from the new issue" />
     <MESSAGE value="more layout changes&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="more layout changes&#10;" />
+    <MESSAGE value="The last minute project fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="The last minute project fixes" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1371,8 +1318,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="142" column="94" selection-start-line="142" selection-start-column="94" selection-end-line="142" selection-end-column="94" />
+        <state relative-caret-position="380">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
           <folding />
         </state>
       </provider>
