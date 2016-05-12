@@ -5,6 +5,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Qm/Qmh13Pa49d5S9BBgsAaRViowv72zNAjmIdHx_KZC1kM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Qm/Qmh13Pa49d5S9BBgsAaRViowv72zNAjmIdHx_KZC1kM.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ZQ/zQVZ0bLK4-NA6PoNu91jsJXpDStAEDDnwehxTZXam9A.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ZQ/zQVZ0bLK4-NA6PoNu91jsJXpDStAEDDnwehxTZXam9A.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" afterPath="$PROJECT_DIR$/app/views/products/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="Group2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +49,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
@@ -87,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/products/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -216,8 +218,8 @@
         <option value="$PROJECT_DIR$/app/controllers/audit_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/audit/request_doc.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/products/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/products/index.html.erb" />
       </list>
     </option>
   </component>
@@ -265,7 +267,78 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Group2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Group2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Group2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Group2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Group2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Group2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Group2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Group2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Group2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
@@ -625,7 +698,7 @@
       <workItem from="1462922450816" duration="1005000" />
       <workItem from="1462954366562" duration="149000" />
       <workItem from="1463016584960" duration="15768000" />
-      <workItem from="1463039162922" duration="2038000" />
+      <workItem from="1463039162922" duration="2314000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to the file that I created to get the project working on my machine. Mainly bundler installer, and the gemfile edit">
       <created>1459560577526</created>
@@ -732,17 +805,24 @@
       <option name="project" value="LOCAL" />
       <updated>1463042016334</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="more layout changes&#10;">
+      <created>1463042030289</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1463042030289</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64860000" />
+    <option name="totallyTimeSpent" value="65136000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41066837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41066837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44545454" sideWeight="0.5496134" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961166" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1168,18 +1248,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/products/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/products/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
           <folding />
         </state>
       </provider>
