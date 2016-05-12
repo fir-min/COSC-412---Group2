@@ -25,7 +25,20 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="well text-center">
-        About us at a glance.
+      	<b>Military Spending</b>
+      	<br>
+      	<br>
+        <% Purchase.all.each do |purchase| %>
+  		<b><%= User.find(purchase.id).name%> </b><br>
+  			<%Receipt.where(purchase_id: purchase.id).each do |res|%>
+  			<%product = Product.find(res.product_id)%>
+  			<br>
+  			Prodcut Name: <%=product.name%> <br>
+  			Description: <%=product.description%> <br>
+  			Price: <%=product.price%> <br>
+  			<br>
+  			<%end%>
+		<% end %>
       </div>
     </div>
     <!-- /.col-lg-12 -->
