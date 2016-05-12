@@ -1,0 +1,6 @@
+<%= form_for conversation_messages_path(@conversation), do |f| %>
+  <div>
+    <%= f.text_area :body %>
+  </div>
+  <%= f.submit "Send" %>
+<% end %>
