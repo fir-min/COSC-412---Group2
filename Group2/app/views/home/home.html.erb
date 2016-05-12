@@ -1,5 +1,6 @@
 <body>
 
+<% if current_user != nil && current_user.user_type_id != 2 || current_user == nil %>
 <!-- Navigation -->
 
 
@@ -87,6 +88,7 @@
 <script src="js/bootstrap.min.js"></script>
 
 </body>
+    <% end %>
 
 <% if signed_in? %>
 
@@ -103,8 +105,7 @@
 
 <% if current_user.user_type_id == 2 %><%# This is generating a home for managers%>
 
-
-    <table>
+        <table class="table table-striped">
       <thead>
       <tr>
         <th>Email</th>
@@ -139,7 +140,7 @@
     <%= label_tag(:changePermission, "True") %> <br>
     <input id="truePermission" name="truePermission" type="checkbox" value=true /> <br>
         <%= label_tag(:changePermission, "False") %> <br>
-        <input id="falsePermission" name="falsePermission" type="checkbox" value=false />
+        <input id="falsePermission" name="falsePermission" type="checkbox" value=false /> <br>
         <%= label_tag(:auditor, "Auditor Email") %> <br>
     <%= text_field_tag(:auditor) %>
     <%= submit_tag("Submit Change") %>

@@ -48,13 +48,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">
-        <img src="http://i.imgur.com/fv54XAJ.jpg?1t=Logo" alt="">
-      </a>
+
+
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+        <li><%= link_to 'HOME', '/' %></li>
         <% if user_signed_in? %>
             <li><%= link_to "Messages", conversations_path%></li>
             <% case current_user.user_type_id
@@ -63,8 +63,8 @@
                 <li><%= link_to 'Manage Users', users_path %></li>
                 <li><%= link_to 'Manage Budget', '/budgets/new' %></li>
             <% when 2 %>
-                <li><%= link_to 'Manage Agent\'s Budget', budgets_path %></li>
-                <li><%= link_to 'Manage Users that are Watchers id = 5', users_path %></li>
+                <li><%= link_to 'Manage Agent\'s Budget', 'budgets/new' %></li>
+                <li><%= link_to 'Manage Users that are Watchers', users_path %></li>
             <% when 3 %>
                 <li><%= link_to 'View Purchases', purchases_path %></li>
 

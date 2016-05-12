@@ -49,3 +49,9 @@ Product.create(:name => 'prod06', :description => 'Ut enim ad minim veniam', :pr
 Product.create(:name => 'prod07', :description => 'Ut enim ad minim veniam', :price => 1045.00, :image => 'http://placekitten.com/150/150')
 
 Product.create(:name => 'prod08', :description => 'Ut enim ad minim veniam', :price => 2.99, :image => 'http://placekitten.com/150/150')
+
+BudgetManage.create(:amount => 12300, :department => "USPS", :deptno => 4)
+
+BudgetManage.create(:amount => 45300, :department => "DOD", :deptno => 42)
+
+BudgetManage.create(:amount => 73300, :department => "NSA", :deptno => 41)
