@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d02cb4f-d823-4fdc-ac7e-8bffb32ae5f8" name="Default" comment="Fixed the issue caused from the new issue">
+    <list default="true" id="5d02cb4f-d823-4fdc-ac7e-8bffb32ae5f8" name="Default" comment="No more  side menu,">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/group2_development" afterPath="$PROJECT_DIR$/group2_development" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/1K/1K-sYpK24WZEtuam5X7xnYJwz_gAirpaYptLUx0Sfbw.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/1K/1K-sYpK24WZEtuam5X7xnYJwz_gAirpaYptLUx0Sfbw.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/74/74drLNAD0N17MqLC2BksooyPn3rqkpzaqm0nvTvR1ZI.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/74/74drLNAD0N17MqLC2BksooyPn3rqkpzaqm0nvTvR1ZI.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/7y/7yigfGHSgDwfrnUz9ehzf-ULaUISt09HUDNEljUec_w.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/7y/7yigfGHSgDwfrnUz9ehzf-ULaUISt09HUDNEljUec_w.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/8r/8r1l-TdrtKTPS4tiBdfd2Ki0BWf83asUfHyb6Dm13m8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/8r/8r1l-TdrtKTPS4tiBdfd2Ki0BWf83asUfHyb6Dm13m8.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/97/97_s0O2WFU-dXskHc81QddXstL5n-ju6MMycIHZT_8g.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/97/97_s0O2WFU-dXskHc81QddXstL5n-ju6MMycIHZT_8g.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/9k/9KM60hCIZaALuZCK37Mmr7ooWyREF907eOJZC8spfBY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/9k/9KM60hCIZaALuZCK37Mmr7ooWyREF907eOJZC8spfBY.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/E3/E3mC55i3R_Sn-PBxdLGiLe98xIsWgXTg_NI5sHlwiH4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/E3/E3mC55i3R_Sn-PBxdLGiLe98xIsWgXTg_NI5sHlwiH4.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Fp/fPCsprOTK_z9LWeL4cDn3KqaiHaKhULpT2J8okhEHQM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Fp/fPCsprOTK_z9LWeL4cDn3KqaiHaKhULpT2J8okhEHQM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/GV/gVmkwDSbNShQbyBxt5lKUpivCdvvRLtv5sDU4ZVC47k.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/GV/gVmkwDSbNShQbyBxt5lKUpivCdvvRLtv5sDU4ZVC47k.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HB/HbUA3AOe57cCaFGVLcAeqyRsCGY29k1ZLUTsTgMRTko.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HB/HbUA3AOe57cCaFGVLcAeqyRsCGY29k1ZLUTsTgMRTko.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ja/ja3raWLKaFrf52hI91Y7MAa173oNa3qlZWjmnChpr5c.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ja/ja3raWLKaFrf52hI91Y7MAa173oNa3qlZWjmnChpr5c.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/K4/K4kxVvHgR7sQJSxN7Ig16kzjJ2dXdEQb2b8cMDvnMuM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/K4/K4kxVvHgR7sQJSxN7Ig16kzjJ2dXdEQb2b8cMDvnMuM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/OG/oGanUAjjvc5VBIOJUNTJs16slNOb-sdWVH-vCmXb7Xs.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/OG/oGanUAjjvc5VBIOJUNTJs16slNOb-sdWVH-vCmXb7Xs.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Q3/Q37RKTnv2tfdK_hRgQmz2YJaKqV_EXfLl_rS59oP4hk.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Q3/Q37RKTnv2tfdK_hRgQmz2YJaKqV_EXfLl_rS59oP4hk.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/QH/QhtmLsj2FUfFwkF3CipjWiVYQgeYUs2k-PYahVKrBoM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/QH/QhtmLsj2FUfFwkF3CipjWiVYQgeYUs2k-PYahVKrBoM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Qm/Qmh13Pa49d5S9BBgsAaRViowv72zNAjmIdHx_KZC1kM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Qm/Qmh13Pa49d5S9BBgsAaRViowv72zNAjmIdHx_KZC1kM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/S1/S1KcyUHWteJYGO36YGgmZTuwneiDlK6OFh6H_QX9CW4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/S1/S1KcyUHWteJYGO36YGgmZTuwneiDlK6OFh6H_QX9CW4.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/SE/Sez8-a0Qa1JfAKzXlkNtbMDa3nvo6aRIqErgyP5hLyU.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/SE/Sez8-a0Qa1JfAKzXlkNtbMDa3nvo6aRIqErgyP5hLyU.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Tz/TzLOo5XahqpVRqW7Q2v3MjLSRtObDlZuvt013VXABJU.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Tz/TzLOo5XahqpVRqW7Q2v3MjLSRtObDlZuvt013VXABJU.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Y1/Y1rfSxnzUp0qVE7OLaJaEP3Ouc28QkGdCY75SzDv9Cc.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Y1/Y1rfSxnzUp0qVE7OLaJaEP3Ouc28QkGdCY75SzDv9Cc.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Yi/YiwzYyjS5P4CXtReLJCYJDwH8rJJSbYPwcBVPkMQZ3g.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Yi/YiwzYyjS5P4CXtReLJCYJDwH8rJJSbYPwcBVPkMQZ3g.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ZQ/zQVZ0bLK4-NA6PoNu91jsJXpDStAEDDnwehxTZXam9A.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ZQ/zQVZ0bLK4-NA6PoNu91jsJXpDStAEDDnwehxTZXam9A.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/dH/dHmDQsY-a8jglPh_wBfECWwj8q1cNPmedHsRlUpJYao.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/dH/dHmDQsY-a8jglPh_wBfECWwj8q1cNPmedHsRlUpJYao.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/eR/er0DEnczvVWhMWylmhVXR7HYqg5aPhpHcXm98yx0OYo.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/eR/er0DEnczvVWhMWylmhVXR7HYqg5aPhpHcXm98yx0OYo.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/gq/GQ_xTYq2bu7BK42XpPPdjVhz8dB1fJAVh5jVMROvxq8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/gq/GQ_xTYq2bu7BK42XpPPdjVhz8dB1fJAVh5jVMROvxq8.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/h5/h5MbdjgTxlScGHE7jzCpkg0UZSGz_fNUcmI29Yj3S-8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/h5/h5MbdjgTxlScGHE7jzCpkg0UZSGz_fNUcmI29Yj3S-8.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/hS/hs2TZzJNJGPY38u1M9b3k3XHHBgrdEZyizDks05j_14.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/hS/hs2TZzJNJGPY38u1M9b3k3XHHBgrdEZyizDks05j_14.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/lv/lve1jur0Pfvt9KYT9GwTvyMX_UT12CCbZUmUS6r0DDA.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/lv/lve1jur0Pfvt9KYT9GwTvyMX_UT12CCbZUmUS6r0DDA.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/p8/p8AnyDXFpEW0DSybsJw4s7Z0r-6egBJCI8BTHeup6vk.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/p8/p8AnyDXFpEW0DSybsJw4s7Z0r-6egBJCI8BTHeup6vk.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/qM/Qmh13Pa49d5S9BBgsAaRViowv72zNAjmIdHx_KZC1kM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/qM/Qmh13Pa49d5S9BBgsAaRViowv72zNAjmIdHx_KZC1kM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/qn/qnb3jxhXzBO7YdDHIRQYWCTX6MPafNotdXWVpO57ufk.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/qn/qnb3jxhXzBO7YdDHIRQYWCTX6MPafNotdXWVpO57ufk.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/rV/rVKXwmRvpaFXh1oHQ4MyfklOMuBx8w18nsPtqNwRRgM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/rV/rVKXwmRvpaFXh1oHQ4MyfklOMuBx8w18nsPtqNwRRgM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/u9/u9aYcY2qDPG3WN0S4d7RRMcmK0IaRoWIvg4hY5hwS_4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/u9/u9aYcY2qDPG3WN0S4d7RRMcmK0IaRoWIvg4hY5hwS_4.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/uO/UouOPBH6P2g4mN3Vv1kDkokg6qpnpmQaBUEKruzLzVg.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/uO/UouOPBH6P2g4mN3Vv1kDkokg6qpnpmQaBUEKruzLzVg.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/v-/v-TOU1M-DhJ0P2ppipbukXB9pT9-b74tRcgIn9andD8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/v-/v-TOU1M-DhJ0P2ppipbukXB9pT9-b74tRcgIn9andD8.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/xT/XTUbFIE95W9SckM4tNtSa24QmBS0DcxEds5wTmycPKo.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/xT/XTUbFIE95W9SckM4tNtSa24QmBS0DcxEds5wTmycPKo.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/yj/yjzcsly-ZXvS_-a9vffBebaRq0bgaCUhtRhLraGd-4A.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/yj/yjzcsly-ZXvS_-a9vffBebaRq0bgaCUhtRhLraGd-4A.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/yq/yq_OPMp57CImZQiN8mTBTp6v6z3LnQY91pchR3y0iqI.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/yq/yq_OPMp57CImZQiN8mTBTp6v6z3LnQY91pchR3y0iqI.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/audit_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/audit_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/audit/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/audit/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/audit/request_doc.html.erb" afterPath="$PROJECT_DIR$/app/views/audit/request_doc.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" afterPath="$PROJECT_DIR$/app/views/products/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="Group2.iws" />
@@ -28,13 +66,13 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Group2@db_schema_load__Group2.coverage" NAME="db:schema:load: Group2 Coverage Results" MODIFIED="1461566692452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Group2" />
-    <SUITE FILE_PATH="coverage/Group2@db_migrate__Group2.coverage" NAME="db:migrate: Group2 Coverage Results" MODIFIED="1463022561850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Group2" />
-    <SUITE FILE_PATH="coverage/Group2@db_seed__Group2.coverage" NAME="db:seed: Group2 Coverage Results" MODIFIED="1463023003218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Group2" />
-    <SUITE FILE_PATH="coverage/Group2@Development__Group2.coverage" NAME="Development: Group2 Coverage Results" MODIFIED="1463036863353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Group2" />
-    <SUITE FILE_PATH="coverage/Group2@IRB_console__Group2.coverage" NAME="IRB console: Group2 Coverage Results" MODIFIED="1459555167717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Group2" />
     <SUITE FILE_PATH="coverage/Group2@Rails_console__Group2.coverage" NAME="Rails console: Group2 Coverage Results" MODIFIED="1461562321392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Group2" />
+    <SUITE FILE_PATH="coverage/Group2@db_seed__Group2.coverage" NAME="db:seed: Group2 Coverage Results" MODIFIED="1463023003218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Group2" />
     <SUITE FILE_PATH="coverage/Group2@db_create__Group2.coverage" NAME="db:create: Group2 Coverage Results" MODIFIED="1461566637809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Group2" />
+    <SUITE FILE_PATH="coverage/Group2@Development__Group2.coverage" NAME="Development: Group2 Coverage Results" MODIFIED="1463039203450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Group2" />
+    <SUITE FILE_PATH="coverage/Group2@db_schema_load__Group2.coverage" NAME="db:schema:load: Group2 Coverage Results" MODIFIED="1461566692452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Group2" />
+    <SUITE FILE_PATH="coverage/Group2@IRB_console__Group2.coverage" NAME="IRB console: Group2 Coverage Results" MODIFIED="1459555167717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Group2" />
+    <SUITE FILE_PATH="coverage/Group2@db_migrate__Group2.coverage" NAME="db:migrate: Group2 Coverage Results" MODIFIED="1463022561850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Group2" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -52,38 +90,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="home.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/home.html.erb">
+      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="3" selection-end-line="39" selection-end-column="12" />
+            <state relative-caret-position="561">
+              <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="request_doc.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/audit/request_doc.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20160511172907_create_purchases.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20160511172907_create_purchases.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20160506024808_create_products.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20160506024808_create_products.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/audit/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -92,10 +110,40 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="request_doc.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/audit/request_doc.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/products/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="audit_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/audit_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
+            <state relative-caret-position="51">
               <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
@@ -112,31 +160,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="note.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/audit/note.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/audit/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+            <state relative-caret-position="204">
+              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="access_audit.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/access_audit.rb">
+      <file leaf-file-name="correct.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/audit/correct.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -188,7 +236,6 @@
         <option value="$PROJECT_DIR$/app/views/charges/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/charges_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/signedin.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
@@ -205,13 +252,15 @@
         <option value="$PROJECT_DIR$/app/views/conversations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/conversations/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/home.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20160512030902_add_message_to_access_audits.rb" />
         <option value="$PROJECT_DIR$/app/views/audit/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/audit_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/audit/request_doc.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/products/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -228,10 +277,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-13" />
-    <option name="y" value="-13" />
-    <option name="width" value="2186" />
-    <option name="height" value="1386" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -258,8 +307,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -341,28 +388,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Group2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Group2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -382,95 +407,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Group2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Group2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Group2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Group2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conversations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Group2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Group2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="audit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Group2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Group2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alerts" />
+              <option name="myItemId" value="products" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -526,7 +463,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -544,233 +483,6 @@
       <recent name="C:\Users\Ted\Documents\School Related\Spring 2016\COSC 412 - 450\Project\CodedGit\COSC-412---Group2\Group2\app\views\user" />
       <recent name="C:\Users\Ted\Documents\School Related\Spring 2016\COSC 412 - 450\Project\CodedGit\COSC-412---Group2\Group2\app\views\devise" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/assets/stylesheets/application.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/assets/stylesheets/purchases.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/assets/stylesheets/scaffolds.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/controllers/charges_controller.rb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/controllers/purchases_controller.rb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/models/purchase.rb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/cart/index.html.erb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/charges/_new.html.erb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/layouts/application.html.erb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/purchases/_form.html.erb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/purchases/edit.html.erb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/purchases/index.html.erb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/purchases/index.json.jbuilder</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/purchases/new.html.erb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/purchases/show.html.erb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/purchases/show.json.jbuilder</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/config/routes.rb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/db/schema.rb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/group2_development</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/log/development.log</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/controllers/purchases_controller_test.rb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/fixtures/purchases.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/2c/2cbMnGbJMUyIRHBIvn76WdbcLLeg9pdB5fDjc_Pikq8.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/SE/Sez8-a0Qa1JfAKzXlkNtbMDa3nvo6aRIqErgyP5hLyU.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Tz/TzLOo5XahqpVRqW7Q2v3MjLSRtObDlZuvt013VXABJU.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ZN/ZNULzNFuOEbFc_qCPP4LWkFyL1UOd97qwJ0UsbdqTL4.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/cO/CoFcsBL-Br6SGdEf2KXO9kGHTO90CISzdZ2M_BYVy2g.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/jK/jkE6a1Z1BXm54bOBuo3_Lte9lthaSodmw1UgjbWSZSY.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/p8/p8AnyDXFpEW0DSybsJw4s7Z0r-6egBJCI8BTHeup6vk.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/pM/Pm3ENYpCrQMOJGd-d8lACN_nbGZWiivq_KyPLJoD9Xk.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/rH/rhGGZFqROGGE4LdZ4AuQemVvC0LfyownYAfAQbuQ8p0.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/yr/yr21SCGODM61BYCBLzx53460hFB_jSyWiz9jEdU75iQ.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/pids/server.pid</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/models/receipt.rb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/receipts/_receipt.html.erb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/db/migrate/20160511172810_create_receipts.rb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/db/migrate/20160511172907_create_purchases.rb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/fixtures/receipts.yml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/models/receipt_test.rb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/0O/0OOOla1kd1gFb5xbFodvmc_E9NZE1i3gt7eulL7AK7w.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/0m/0m3mas-wdHykMrar-nSA2oftL1sDD0RIb-3AIq_q4Wk.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/3U/3UmEajDLzufhl5fEN-9NfsUyY3DDl_jeMbc0nhRQ_PY.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/3b/3b9xc0Lrh-kWiDLqpoKoPDru4IYvnD7E9KQ9eyX15rA.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/4Q/4Qs7idWUwMlUmCU6qr1hXLfbvAE_4H5Sd9wB1PHPpGc.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/73/73YrBv3k4tx9JKsT8VBK494FrI41RZXFDJ_SS0At5wc.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/77/77U66NNnXlM269jbnUQG9KLWeLhxRcf6ESto23Mu1ok.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/7V/7V40wRP4iw1LbMV_qDh6PnPj3YTTkHSqNcyMOEBeDgU.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/7b/7bcqLzNdo8yNe2KcAkyo6DCy_a-_swV26fC-ek102-Y.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/8F/8foNNnYNVay1DKLv5KaXGvBY_WVG40MavP_0G8hRXW8.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/8r/8r1l-TdrtKTPS4tiBdfd2Ki0BWf83asUfHyb6Dm13m8.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/9g/9GINInpWqcERBKp2-lM_46eFyd816Szc8tBsbpF92vk.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/9g/9ghZlyNUp6C-Guq481QWY21rfDcuCcNGXnD_ztYLTQk.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/AM/AMCSS3_u5i2DPpO2vUzgE2jqVEdzsCKVrX_0yexgcyU.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ab/AbdKaWEJEsTPRCKoBrtUeqr3D2u3K_9slR-lOowRFEE.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/BH/BHNzwDcLi9S0eFtJ9_8au7XCIAo1kCa-gKpyzX6eLQY.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/BO/Bog5IJ29O2aGUAzYLKMXLB0-YHCLoDkfK9YEOsciKkI.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/D2/D2MJKV-zCkJkU_3YxoLCUUvnz_fplygWyG_nzFVeIjQ.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/D9/D9vbd26kQeIx9f5h-kyQTCotjBbyN1-OOmm6kEUXhOE.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/DD/DDPGKD7-GA7Ez87dDO2IUGyYhK0wr1hrrW8K9oY0whA.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/E3/E3mC55i3R_Sn-PBxdLGiLe98xIsWgXTg_NI5sHlwiH4.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/EY/EYpdd8XSQB4MY0msXBGoGtwiExBFVtB9SbOqH60sW7s.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/G1/G1saQMJ74G2om79XT0AIEC_rd3DVyP9_MkkqzTYQdpw.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/GV/gVmkwDSbNShQbyBxt5lKUpivCdvvRLtv5sDU4ZVC47k.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/I7/I7p_nplqcq-PxpdznTJ-F5w3Q2KqkwZY9l9UEuToOAk.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ic/IcDdQxaiLGDF3KvZ4jQI49pTRO2KObwYrTlvV6rx3t8.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/It/ITZ2VA7xGvp_aJsf60uFxyhqHbmqMaB3YeA5Ev62mZI.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/J2/J2Eo_On4xJc3gjesTt1U_M1d7oDAF_pcQceMJz7z5mA.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Jo/JOLPJn9iVkPYEBzag5B2STmB0h3e-RREFlmZCMLo1Q8.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/K4/K4kxVvHgR7sQJSxN7Ig16kzjJ2dXdEQb2b8cMDvnMuM.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Km/KMGrvGF4ZdTVIedEAoQkZBrGFB4AjQL714XPVwOQYZU.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Kn/Knv9cSAq-uk813tJFjXC490tRj9TMPNx5Z4EWm5WfPw.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Kq/KQIpsEvcxpD-BDLPh22EjLPcWPslfLsrln1n57M08bk.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/NS/NSixJuL2j-2fuaywZ1FQjiMZTjXmxGQguIzYWFR9uJo.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ni/niCee-iI78oJsU5Ey0FaUiCC3AZyNECRmDbJhTi2nLM.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/OG/oGanUAjjvc5VBIOJUNTJs16slNOb-sdWVH-vCmXb7Xs.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/PE/PEEg5qjiGra0QQ1PyWH-UakO0CVm3HqZ5OTuXTGMA1Q.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Pp/PPJ764DAmBiYyyW7uzK0z0uKS49yv66jX4kQSpwbY5s.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Q0/Q0L9WSkYplu6kZp-YV80D5Ka91qBaEzjMEvuOg2F4bc.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Q3/q3jBgDzaisol0yzjQEpjk0JsAy0F0iK8KREoZjuozJU.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/QH/QhtmLsj2FUfFwkF3CipjWiVYQgeYUs2k-PYahVKrBoM.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Qt/QTLfbXGFxcL5zAQtCizNmhvMIxt-M6oYKR60gCpTXDc.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/S1/S1KcyUHWteJYGO36YGgmZTuwneiDlK6OFh6H_QX9CW4.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/SO/sO_OE68zh-ZsPMpfjzB3cnB900BMllzMpY__bCI355E.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Sn/sNSBw3UWGWVhe9wyUaCIAjAHi1G5p2YNJrOIiJBa7_I.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Uc/ucgcNbTEWktllxllJFtMr2H45jw0lA9MSrq5EuRU1es.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/VJ/VJsGLMivwvWyKOIIVgONONGi8QBy1jV2SQtlfML4vA0.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/VY/VyY6c_sVy6qeoVYeWZNSyPqIl9ezWvgU0tXTUd0h43Y.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ws/Wsl2KAJYGPmaLsHEFpdCpHll6MKY2CZynjNxsn-YJhQ.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/XB/XbXmmjlvgB20EhplUj_j0kCVotmtoWtxr2Ym1o1j0C0.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Yu/YUBE4N6DcDIJZpLWlZyLayT0C7vV6o4pfN7cdwAdP5w.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ZL/zl1kjirwZ0OXbbEe0hihE0eX1wEEQsuXvcrOxBq0Gr8.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Zg/ZGx6-bnxf12gn64J_T886GBa_L6jz2S7pRnxbG7H4kA.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/dU/dUGNWzjhGXSF5RC2VgW_LnhRLscxE7IaG92kUrydFbc.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/e4/e4m_kl2oYzRAd-t5TGyrNLp5oRP40HAvkZDob8dm09k.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/f8/f8DWQrKLP2LG6ci09_7KBg1EM1m21To-fKXBxhn6rZc.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/fZ/fZSs4hihRF6i_hohsT63y9f4mfaV2Vp0K1aVLswApbM.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/fr/FR63aLaT-LYjo3Paw5l4ITQqADjQPSrshxxhaSEFeNM.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/g0/g0bAQQEH0Dw2FFqstEFNd04VAw5_9gBum3TmZ9vIynk.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/gK/GkUIZOn2ARLowVtFRm47b4O0MyLjRWhtJW1FldNt82k.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/gs/gspuULFyvPoP2aA_YJvgtVzvxT7Rq5qESD3_e23O9ZM.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/hh/hhIikLJf0TSR3d-fBEfPcGD-byLmMeInKTSCLOEGiQQ.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/jK/JK9AGlgt7jyC2SxuQ_ICbpbQm_O2Ixr5MBStHstuJaA.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/jX/jXABL4l0_XkehtZWhPd34Qxhh_1euJULGHpreeXclXM.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/kp/KPjEhprtomJRr79r67rn6fzeyE6dGSpERvxUbkrKOPE.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/oB/oBxrnV9EuBgiXCsgzftdtWd-gMx3oFxHtioPkwnYN6A.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/pn/PNNTim8PMzwgN6keIaHLgvkeQXe_QGyFL5Owid0Feug.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/qD/qDJ-rEMgjuJ8A8zUa2CUIYzQUvM585hHXe6-8KhoQJg.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/qx/qx_5TBEgWZvURnU0jPFyXoYxCYoncC_uSPXcR41k0WI.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/rr/rrnkiBkpcRS7cNKLysz11xY8N-5pQmgc_r9L0ONJuAM.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/tO/tOpX84rCZGuk7f-30oYGFaJEG6zQ18tZB2wRIpoF_6Q.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/u0/u0B0vwNHnMQ2GLzf1p_Qca9muNgIIBBr_EgHvHM27nA.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/uk/ukaBjSuuoFkynUI3gib8ONuLOAWR_amqQkps_YljZ4g.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/un/UNIqzvFGXJSanWH7fnGmSWRmULkt1iKdcMuEVLTQiaE.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/v9/v9WtV7nJrrEQmO8Cx_ENgUKZIVqL8sdvPGwBvU0jgMI.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/wi/WIJCklzPOtq9P5sAYxyD6WIj1-5asRYNoo3quX1Y6l0.cache</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/wr/wrmhzVxZ9PFWGyX0k3PxkHpLMAc7pFogAk1_VACZdaM.cache</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/db/migrate/20160407233327_create_purchases.rb</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/db/migrate/20160407233612_add_user_id_to_purchases.rb</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Rails.Development: Group2">
     <configuration default="false" name="Rails console: Group2" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
@@ -1072,10 +784,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Rake.db:seed: Group2" />
-        <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate: Group2" />
-        <item index="2" class="java.lang.String" itemvalue="Rake.db:schema:load: Group2" />
-        <item index="3" class="java.lang.String" itemvalue="Rake.db:create: Group2" />
+        <item index="0" class="java.lang.String" itemvalue="Rake.db:schema:load: Group2" />
+        <item index="1" class="java.lang.String" itemvalue="Rake.db:create: Group2" />
+        <item index="2" class="java.lang.String" itemvalue="Rake.db:seed: Group2" />
+        <item index="3" class="java.lang.String" itemvalue="Rake.db:migrate: Group2" />
         <item index="4" class="java.lang.String" itemvalue="IRB console.Rails console: Group2" />
       </list>
     </recent_temporary>
@@ -1109,6 +821,7 @@
       <workItem from="1462922450816" duration="1005000" />
       <workItem from="1462954366562" duration="149000" />
       <workItem from="1463016584960" duration="15768000" />
+      <workItem from="1463039162922" duration="2016000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to the file that I created to get the project working on my machine. Mainly bundler installer, and the gemfile edit">
       <created>1459560577526</created>
@@ -1212,19 +925,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62822000" />
+    <option name="totallyTimeSpent" value="64838000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="2186" height="1386" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4054054" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41066837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44545454" sideWeight="0.5496134" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961166" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32518956" sideWeight="0.49227798" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Routes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296332" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44481888" sideWeight="0.45038658" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44415584" sideWeight="0.45038658" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3007582" sideWeight="0.488417" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1234,6 +946,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Routes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296332" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32940185" sideWeight="0.49805826" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49339208" order="1" side_tool="false" content_ui="tabs" />
@@ -1247,12 +960,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44545454" sideWeight="0.5496134" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32597402" sideWeight="0.49227798" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44545454" sideWeight="0.45038658" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32518956" sideWeight="0.49227798" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44415584" sideWeight="0.45038658" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Routes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296332" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3012987" sideWeight="0.488417" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3007582" sideWeight="0.488417" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32940185" sideWeight="0.49805826" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11696658" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41066837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961166" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49339208" order="1" side_tool="false" content_ui="tabs" />
@@ -1290,13 +1003,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/home/signedin.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3927">
@@ -1407,14 +1113,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/audit/note.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20160401181812_devise_create_users.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1431,19 +1129,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/audit/correct.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/audit/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1451,7 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45">
           <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1467,7 +1155,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1475,7 +1162,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1499,7 +1185,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1507,7 +1192,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1515,7 +1199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,7 +1206,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1531,7 +1213,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1539,7 +1220,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1547,23 +1227,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1571,7 +1234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1579,13 +1241,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="879">
           <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
+        <state relative-caret-position="289">
           <caret line="17" column="10" selection-start-line="17" selection-start-column="3" selection-end-line="39" selection-end-column="12" />
           <folding />
         </state>
@@ -1601,32 +1262,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/access_audit.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
+        <state relative-caret-position="34">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/audit/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/audit/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/audit/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1649,7 +1286,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
+        <state relative-caret-position="442">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
@@ -1657,16 +1294,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/audit_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
+        <state relative-caret-position="51">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/audit/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/audit/correct.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/audit/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/audit/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/audit/note.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/audit/request_doc.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+        <state relative-caret-position="187">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/products/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
           <folding />
         </state>
       </provider>
