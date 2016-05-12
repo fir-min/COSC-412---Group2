@@ -2,5 +2,6 @@
   <% product = Product.find(receipt.product_id) %>
   <p>Product: <%=link_to product.name, product%></p>
   <p>Price: <%=product.price%></p>
+  <p>Quantity: <%=receipt.quantity%></p>
   <br>
 </div>

@@ -1,4 +1,5 @@
 class ChargesController < ApplicationController
+	before_filter :authenticate_user!
 	$amount
 	$cart
 	def new
@@ -17,9 +18,7 @@ class ChargesController < ApplicationController
 		purchase = Purchase.new(:user_id => current_user.id, :total => $amount.round(2))
 		purchase.save
 		$cart.each do |id, quantity|
-			quantity.times do
-				purchase.receipts.create(:product_id => id)
-			end
+			purchase.receipts.create(:product_id => id, :quantity => quantity)
 		end
 
 

@@ -66,7 +66,8 @@ class ProductsController < ApplicationController
     #makes sure this page is available for the right user only
     def validate_user
       if user_signed_in?
-        if (current_user.user_type_id != 4)
+        if !(current_user.user_type_id == 4 or current_user.user_type_id == 7 or
+          current_user.user_type_id == 6)
           redirect_to root_path
         end
       end
