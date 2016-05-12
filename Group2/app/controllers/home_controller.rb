@@ -24,6 +24,7 @@ class HomeController < ApplicationController
     end
   end
   def home
+
     @auditRequest = AccessAudit.all
     @temper = params[:truePermission]
     if params[:truePermission] && params[:auditor]

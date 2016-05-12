@@ -2,12 +2,33 @@
 
 <% if @temp3 != nil && @temp3.access == true %>
 
-    <p> Start Date: <%= @temp %> </p>
-    <p> End Date: <%= @temp1 %> </p>
-    <p> Department #: <%= @temp2 %> </p>
-    <p> The access audit area <%= @temp3.access %> </p>
-    <p> The access audit area <%= @temp3.message %> </p>
-    <%= render :partial => 'form' %>
+
+   <%# <p> The access audit area <%= @temp3.access %>
+  <%#  <p> The access audit area <%= @temp3.message %> 
+    <table>
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Price</th>
+
+
+        <th colspan="2"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <%  @purchasesTemp.each do |ac| %>
+          <tr>
+            <td><%= ac.user_id %></td>
+            <td><%= ac.total %></td>
+
+
+
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <%# This is a great comment!  <%= render :partial => 'form' %>
 <% elsif @temp3.access == false %>
 
     <p> You need to request permission</p>

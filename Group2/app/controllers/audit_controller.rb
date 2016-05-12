@@ -1,7 +1,8 @@
 class AuditController < ApplicationController
   before_filter :authenticate_user!
   def request_doc
-    @purch = Purchase.all
+
+    @purchasesTemp = Purchase.all
     @temp3 = AccessAudit.find_by_email(current_user.email)
     if params[:deptNo] == 0
 
