@@ -32,3 +32,20 @@ idk.save
 access = AccessAudit.new(:email => 'auditor@gmail.com', :access => false, :message => 'Currently');
 access.save
 
+#products
+
+Product.create(:name => 'prod01', :description => 'Ut enim ad minim veniam', :price => 15.99, :image => 'http://placekitten.com/150/150')
+
+Product.create(:name => 'prod02', :description => 'Ut enim ad minim veniam', :price => 5.99, :image => 'http://placekitten.com/150/150')
+
+Product.create(:name => 'prod03', :description => 'Ut enim ad minim veniam', :price => 19.99, :image => 'http://placekitten.com/150/150')
+
+Product.create(:name => 'prod04', :description => 'Ut enim ad minim veniam', :price => 150.00, :image => 'http://placekitten.com/150/150')
+
+Product.create(:name => 'prod05', :description => 'Ut enim ad minim veniam', :price => 24.99, :image => 'http://placekitten.com/150/150')
+
+Product.create(:name => 'prod06', :description => 'Ut enim ad minim veniam', :price => 13.75, :image => 'http://placekitten.com/150/150')
+
+Product.create(:name => 'prod07', :description => 'Ut enim ad minim veniam', :price => 1045.00, :image => 'http://placekitten.com/150/150')
+
+Product.create(:name => 'prod08', :description => 'Ut enim ad minim veniam', :price => 2.99, :image => 'http://placekitten.com/150/150')
