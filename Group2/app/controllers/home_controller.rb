@@ -24,5 +24,16 @@ class HomeController < ApplicationController
     end
   end
   def home
+    @auditRequest = AccessAudit.all
+    @temper = params[:truePermission]
+    if params[:truePermission] && params[:auditor]
+    @temp = AccessAudit.find_by_email(params[:auditor])
+      @temp.access = params[:truePermission]
+      @temp.save
+    elsif params[:falsePermission] && params[:auditor]
+      @temp = AccessAudit.find_by_email(params[:auditor])
+      @temp.access = params[:falsePermission]
+      @temp.save
+    end
   end
 end

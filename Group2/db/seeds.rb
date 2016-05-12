@@ -26,4 +26,6 @@ watch.save
 aud = User.new(:email => 'auditor@gmail.com', :password => 'password', :password_confirmation => 'password', :user_type_id => 6, :name => 'aryn')
 aud.save
 
+access = AccessAudit.new(:email => 'auditor@gmail.com', :access => false, :message => 'Currently');
+access.save
 
