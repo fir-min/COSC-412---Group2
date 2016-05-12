@@ -34,7 +34,10 @@
                         :class => 'btn btn-xs btn-danger' %>
           </td>
         <% end %>
+        <% if current_user.user_type_id == 4 %>
           <td><a href= "/cart/<%= product.id %>"> Add to Cart </a></td>
+        <% end %>
+
 
       </tr>
     <% end %>
